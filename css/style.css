@@ -130,6 +130,12 @@ html{
 	gap:20px;
 	margin:10px 0px;
 }
+.block-1__thumbnaill img{
+    transition: all .5s;
+}
+.block-1__post:hover .block-1__thumbnaill img{
+    filter: brightness(0.7);
+}
 .block-1__post-title{
     display: inline-block;
     font-family: khand;
@@ -165,6 +171,7 @@ html{
     text-transform: uppercase;
     text-align: center;
     align-self: center;
+    cursor: pointer;
 }
 .block-1 h4{
 
@@ -372,11 +379,16 @@ html{
 .block-2__item:nth-child(4)::before{
     content: "4";
 }
-
+.block-2__item:hover .block-2__thumbnaill img{
+    filter: brightness(0.7);
+}
 .block-2__thumbnaill{
     width: 100%;
     height: 100%;
     position: relative;
+}
+.block-2__thumbnaill img{
+    transition: all .5s;
 }
 .block-2__content{
     display: flex;
