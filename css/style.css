@@ -13,7 +13,7 @@ a {
     src: url(../font/ClassicComic.otf);
 }
 
-html{
+body{
     
     background-color: white;
     background-color: #172a31;
@@ -302,10 +302,14 @@ html{
     align-items: center;
     flex-direction: column;
     gap:7px;
+    z-index: 3;
 }
 .featured__title h3{
     font-size: 22px;
     line-height: 1;
+}
+.featured__title h3:hover{
+    color: #FFC107
 }
 .featured__item:first-child .featured__title h3{
     font-size: 30px;
@@ -323,6 +327,13 @@ html{
     font-family: classic;
     font-size: 15px;
     font-weight: bold;
+    transition: all .5s;
+    z-index: 3;
+}
+.featured__category:hover{
+    background-color: black;
+    color: white;
+    border: 2px solid white;
 }
 .meta-tags--featured{
     color: #d8d8d8;
@@ -711,6 +722,7 @@ div.block-3__tv{
     background-position-y: top;
     background-repeat:  repeat no-repeat;
     background-position-x: var(--positionBackground);
+    background-size: 28.4px 100%;
     transition: background 0.23s;
     transition-timing-function: ease-in-out;
     display: flex;
@@ -911,20 +923,6 @@ div.block-3__tv{
     margin-left: 50px;
     padding:10px;
     
-}
-.header:hover .logo{
-    animation: pulse 1.5s linear infinite;
-}
-@keyframes pulse{
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
 }
 
 /*::::::::::::::: BLOQUE 5 :::::::::::::::::::::*/
@@ -1266,5 +1264,145 @@ text{
     width: 100%;
 }
 
+@media screen and (max-width:1125px) {
+    .container{
+        width: 900px;
+    }
+    .featured{
+        grid-template-columns: 1fr 2fr 1fr 1fr;
+    }
+}
 
+@media screen and (max-width:768px) {
+    .container{
+        width: 100%;
+    }
+    .featured{
+        height: auto;
+        gap: 10px 0px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 350px 250px;
+        grid-template-areas: 
+    "item_a item_a item_a item_a"
+    "item_b item_b item_c item_c";
+    }
+    .item_a{
+    clip-path: none;
+    }
+    .item_a img{
+        clip-path: none;
+        transform: scale(0.98);
+    }
+    .item_b{
+        clip-path: polygon(0 0, 100% 0, 97% 100%, 0% 100%);
+        margin-left: 0px;
+        width: 100%; 
+    }
+    .item_b img{
+        clip-path: polygon(0 0, 100% 0, 97% 100%, 0% 100%);
+        transform: scale(0.96);
+    }
+    .item_c{
+        clip-path: polygon(3% 0%, 100% 0, 100% 100%, 0% 100%);
+    }
+    .item_c img{
+        clip-path: polygon(3% 0%, 100% 0, 100% 100%, 0% 100%);
+        transform: scale(0.96);
+    }
+    .item_c .featured__category{
+        left: 30px;
+    }
+    .block-3{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr;
+    }
+    aside, .footer{
+        display: none;
+    }
+}
+@media screen and (max-width:576px) {
+    .container{
+        grid-template-areas:
+        "header header header"
+        "nav nav nav"
+        "featured featured featured"
+        "main main main"
+        "block-4 block-4 block-4"
+        "block3 block3 block3"
+        "main2 main2 main2"
+        "footer footer footer";
+    }
+    .featured{
+        height: auto;
+        gap: 10px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3,50vw);
+        grid-template-areas: 
+    "item_a"
+    "item_b"
+    "item_c";
+    padding: 10px;
+    }
+
+
+    .item_b{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        margin-left: 0px;
+        width: 100%; 
+    }
+    .item_b img{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        transform: scale(0.98);
+    }
+    .item_c{
+        clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);
+    }
+    .item_c img{
+        clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);
+        transform: scale(0.98);
+    }
+    .item_c .featured__category{
+        left: 20px;
+    }
+    .block-3{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3,150px);
+    }
+
+    .nav, .section-header{
+        display: none;
+    }
+    .block-1__post{
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .block-3__item a{
+        font-size: 15px;
+    }
+    .block-3__item--comics, .block-3__item--movies, .block-3__item--tv, .block-3__item--videogames, .block-3__item--anime, .block-3__item--manga{
+        clip-path: none;
+    }
+    .block-3__comics, div.block-3__movies, div.block-3__tv, .block-3__videogames, .block-3__anime, .block-3__manga{
+        clip-path: none;
+    } 
+    .featured__item:first-child .featured__title h3 {
+        font-size: 22px;
+        line-height: 1;
+    }
+
+    .block-5__container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas:         
+        "first"
+        "second"
+        "third"
+        "fourth"
+        "fifth";
+    }
+    .block-5__container article:first-child {
+        grid-template-rows: 50vw 1fr;
+    }
+}
 

@@ -4,9 +4,10 @@ const next = document.querySelector(".next");
 const prev = document.querySelector(".prev");
 const buttonTop = document.querySelector('.button-top');
 
-let previousPosition=0;
-let positionNavScrollDown = navBar.offsetTop+navBar.offsetHeight
-let positionNavScrollUp = navBar.offsetTop;
+
+let posicionY = 0;
+let navbarOffset = navBar.getBoundingClientRect().top;
+let navBarHeight = navBar.offsetHeight;
 
 const showButton = () => {
     if (window.scrollY > 400) {
@@ -17,28 +18,25 @@ const showButton = () => {
 }
 buttonTop.addEventListener('click', () =>window.scrollTo(0, 0))
 
-window.addEventListener("scroll", ()=>{
-    showButton()
-    const currentPosition = window.pageYOffset;
-    if(currentPosition > previousPosition && currentPosition> positionNavScrollDown){
-        //bajando
-        navBar.classList.remove("nav--show");
-    }   
-    if(currentPosition < previousPosition){
+const posicionarNavBar = () => {
+    if (posicionY > scrollY && scrollY > navbarOffset + navBarHeight)
         //subiendo
-        if(currentPosition>positionNavScrollUp){
-            navBar.classList.add("nav--show")
-        }else{
-            navBar.classList.remove("nav--show")
-        }
-    }
-    previousPosition=currentPosition;
-})
+        navBar.classList.add('nav--show');
+    else
+        //bajando
+        navBar.classList.remove('nav--show');
+    posicionY = scrollY;
+}
 
+
+document.addEventListener('scroll', () => {
+    showButton();
+    posicionarNavBar();
+})
 
 //::::::::::::::::::  Slider ::::::::::::::::::::::::
 
-let contador=0,position=0;
+let contador=0,position=0, positionBg=0;
 for(i=5;i<slider.childElementCount;i++){
     slider.children[i].classList.toggle("hidden");
 }
@@ -47,10 +45,11 @@ next.addEventListener('click', ()=>{
     if(contador==0) return;
     prev.classList.remove("blocked");
     contador--;
-    position+=143;
+    position += 143;
+    positionBg += 142;
     slider.children[contador].classList.toggle("hidden");
     slider.children[5+contador].classList.toggle("hidden");
-    slider.style.setProperty('--positionBackground', position+'px')
+    slider.style.setProperty('--positionBackground', positionBg+'px')
     Array.from(slider.children).forEach(e => {
         e.style.setProperty('--positionSlide',position+'px')
     });
@@ -61,8 +60,9 @@ prev.addEventListener('click', ()=>{
     next.classList.remove("blocked");
     slider.children[contador].classList.toggle("hidden");
     slider.children[5+contador].classList.toggle("hidden");
-    position-=143;
-    slider.style.setProperty('--positionBackground', position+'px')
+    position -= 143;
+    positionBg -= 142;
+    slider.style.setProperty('--positionBackground', positionBg+'px')
     //document.querySelectorAll(".block-4__item").style.setProperty('--positionSlide',position+'px')
     Array.from(slider.children).forEach(e => {
         e.style.setProperty('--positionSlide',position+'px')
