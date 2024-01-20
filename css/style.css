@@ -877,6 +877,7 @@ div.block-3__tv{
     transform: translateY(500px);
     transition: transform 1s ease-in-out;
     cursor: pointer;
+    z-index: 10;
 }
 
 .button-top--show{
@@ -1276,10 +1277,20 @@ text{
 @media screen and (max-width:768px) {
     .container{
         width: 100%;
+        grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "featured featured featured"
+    "main main main"
+    "block-4 block-4 block-4"
+    "block3 block3 block3"
+    "main2 main2 main2"
+    "footer footer footer";
     }
     .featured{
         height: auto;
         gap: 10px 0px;
+        padding: 10px;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 350px 250px;
         grid-template-areas: 
@@ -1321,6 +1332,18 @@ text{
     }
 }
 @media screen and (max-width:576px) {
+    body{
+        background-size: auto;
+    }
+    .header{
+        height: 90px;
+    }
+    .logo{
+        margin-left: 10%;
+    }
+    .logo img{
+        height: 55px;
+    }
     .container{
         grid-template-areas:
         "header header header"
@@ -1334,14 +1357,14 @@ text{
     }
     .featured{
         height: auto;
-        gap: 10px;
+        gap: 3px;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3,50vw);
         grid-template-areas: 
     "item_a"
     "item_b"
     "item_c";
-    padding: 10px;
+    padding: 3px;
     }
 
 
@@ -1378,7 +1401,7 @@ text{
         grid-template-rows: auto;
     }
     .block-3__item a{
-        font-size: 15px;
+        font-size: 13px;
     }
     .block-3__item--comics, .block-3__item--movies, .block-3__item--tv, .block-3__item--videogames, .block-3__item--anime, .block-3__item--manga{
         clip-path: none;
@@ -1403,6 +1426,13 @@ text{
     }
     .block-5__container article:first-child {
         grid-template-rows: 50vw 1fr;
+    }
+
+    .block-6__container{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 50vw);
+    }.block-6__post{
+        height: 100%;
     }
 }
 
