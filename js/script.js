@@ -31,7 +31,7 @@ const posicionarNavBar = () => {
 
 document.addEventListener('scroll', () => {
     showButton();
-    posicionarNavBar();
+    // posicionarNavBar();
 })
 
 //::::::::::::::::::  Slider ::::::::::::::::::::::::

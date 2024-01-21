@@ -13,35 +13,29 @@ a {
     src: url(../font/ClassicComic.otf);
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
-    
-    background-color: white;
-    /* background-color: #172a31; */
     background-image: url(../img/background-light.jpg);
     background-position: top center;
     background-size: contain;
     background-repeat: no-repeat;
-    scroll-behavior: smooth;
-    --bottomValue:0px;
-}
-.layout{
-    /* width:1125px; */
-    margin: auto;
     font-family: roboto;
-    /* background-color: white; */
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(8,auto);
+    grid-template-rows: repeat(7,auto);
     grid-template-areas:
     "header header header"
     "nav nav nav"
     "featured featured featured"
-    "main main sidebar"
-    "block-4 block-4 sidebar"
+    "content content content"
     "block3 block3 block3"
-    "main2 main2 sidebar2"
+    "content2 content2 content2"
     "footer footer footer";
 }
+
 .container{
     width: 1200px;
     padding: 0px 20px;
@@ -49,30 +43,43 @@ body{
 }
 .header{
     grid-area: header;
-    width:100%;
-    height: 130px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     position: relative;
-    /* background-color: blue; */
 }
+.content{
+    grid-area: content;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas: 
+    "main main sidebar"
+    "block-4 block-4 sidebar";
+}
+.content:nth-of-type(2) {
+    grid-area: content2;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "main2 main2 sidebar2";
 
+}
 .main{
     grid-area: main;
     width: 100%;
     height: auto;
     background-color: rgb(255, 255, 255);
-    padding: 20px 10px 10px 20px;
+    padding: 20px 10px 10px 0px;
     /* clip-path: polygon(0 0, 100% 0, 100% calc(100% - 12px), 0% 100%);
     margin-bottom: -14px; */
 }
 
 .sidebar{
     grid-area: sidebar;
-    width: 100%;
+    /* width: 100%; */
     height: 100%;
     background-color: white;
-    padding: 20px 20px 20px 40px;
+    padding: 20px 0px 20px 40px;
     /* position: sticky;
     top:0; */
     /* clip-path: polygon(0 0, 100% 0, 100% calc(100% - 12px), 0% 100%); */
@@ -177,9 +184,7 @@ body{
     align-self: center;
     cursor: pointer;
 }
-.block-1 h4{
 
-}
 .img{
     width: 100%;
     height: 100%;
@@ -234,9 +239,7 @@ body{
 /*------------ SECCION FEATURED -------------*/
 .featured{
     grid-area: featured;
-}
-.featured .container{
-    
+    max-width: 1400px;
     height: 490px;
     padding:20px;
     background-color: rgb(255, 255, 255);
@@ -432,14 +435,15 @@ body{
 
 .block-3{
     grid-area: block3;
-    width: 100%;
-    background-color: rgb(255, 255, 255);
+    /* width: 100%; */
+   
+}
+.block-3 .container{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 160px;
     gap:3px;
-    padding:10px;
-    padding-top:20px;
+    padding:20px;
 }
 .block-3__item{
     background-color: black;
@@ -548,7 +552,7 @@ footer{
     "about social-footer newsletter";
     /* gap: 20px; */
 
-    /* clip-path: polygon(0 20px, 100% 0, 100% 100%, 0% 100%); */
+    
 }
 
 
@@ -707,6 +711,8 @@ footer{
 .block-4__container{
     --positionBackground: 0;
     padding: 25px 0px;
+    align-self: center;
+    width: 710px;
     background-image: url(../img/film.png);
     background-position-y: top;
     background-repeat:  repeat no-repeat;
