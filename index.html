@@ -15,63 +15,65 @@
 	<title>ZonaGeek</title>
 </head>
 <body>
-	<div class="container">
+	<div class="layout">
 	<header class="header">
 		<div class="logo"><a href="#"><img src="img/zonageek-logo.png"></a></div>
 	</header>
 
     <nav class="nav">
-		<!-- <div class="nav__logo"></div> -->
-		<ul class="nav__menu">
-			<li><a href="#">Inicio</a></li>
-			<li><a href="#">Noticias</a></li>
-			<li><a href="#">Reseñas</a></li>
-			<li><a href="#">Listas</a></li>
-			<li><a href="#">Articulos</a></li>
-			<li><a href="#">Contacto</a></li>
-		</ul>
+		<div class="container">
+			<!-- <div class="nav__logo"></div> -->
+			<ul class="nav__menu">
+				<li><a href="#">Inicio</a></li>
+				<li><a href="#">Noticias</a></li>
+				<li><a href="#">Reseñas</a></li>
+				<li><a href="#">Listas</a></li>
+				<li><a href="#">Articulos</a></li>
+				<li><a href="#">Contacto</a></li>
+			</ul>
+		</div>
 	</nav>
 
     <section class="featured">
-		<article class="featured__item item_a">
-			
-			<a class="block-6__link" href="#"><img class="img" src="img/featured/1.jpg" alt=""></a>
-			<div class="featured__title">
-				<div class="meta-tags meta-tags--featured">
-					<p class="meta-tags__autor"><i class="fa-regular fa-circle-user"></i><span>Cosme Fulanito</span></p>
-					<p class="meta-tags__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
+		<div class="container">
+			<article class="featured__item item_a">
+				<a class="block-6__link" href="#"><img class="img" src="img/featured/1.jpg" alt=""></a>
+				<div class="featured__title">
+					<div class="meta-tags meta-tags--featured">
+						<p class="meta-tags__autor"><i class="fa-regular fa-circle-user"></i><span>Cosme Fulanito</span></p>
+						<p class="meta-tags__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
+					</div>
+					<a href=""><h3>La temporada 2 de Loki finalmente tiene fecha de estreno</h3></a>
+					
 				</div>
-				<a href=""><h3>La temporada 2 de Loki finalmente tiene fecha de estreno</h3></a>
+				<a href="#categoria-television" class="featured__category">television</a>
+			</article>
+			<article class="featured__item item_b">
+				<a class="block-6__link" href="#"><img class="fu2" src="img/featured/2.jpg" alt=""></a>
+				<div class="featured__title">
+					<div class="meta-tags meta-tags--featured">
+						<p class="meta-tags__autor"><i class="fa-regular fa-circle-user"></i><span>Cosme Fulanito</span></p>
+						<p class="meta-tags__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
+					</div>
+					<h3>Alita: Battle Angel podría tener una secuela después de todo</h3>
+				</div>
+				<a href="#" class="featured__category">cine</a>
+			</article>
+			<article class="featured__item item_c">
 				
-			</div>
-			<a href="#categoria-television" class="featured__category">television</a>
-		</article>
-		<article class="featured__item item_b">
-			<a class="block-6__link" href="#"><img class="fu2" src="img/featured/2.jpg" alt=""></a>
-			<div class="featured__title">
-				<div class="meta-tags meta-tags--featured">
-					<p class="meta-tags__autor"><i class="fa-regular fa-circle-user"></i><span>Cosme Fulanito</span></p>
-					<p class="meta-tags__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
+				<a class="block-6__link" href="#"><img src="img/featured/3.jpg" alt=""></a>
+				<div class="featured__title">
+					<div class="meta-tags meta-tags--featured">
+						<p class="meta-tags__autor"><i class="fa-regular fa-circle-user"></i><span>Cosme Fulanito</span></p>
+						<p class="meta-tags__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
+					</div>
+					<h3>El remake de The Witcher será de mundo abierto</h3>
 				</div>
-				<h3>Alita: Battle Angel podría tener una secuela después de todo</h3>
-			</div>
-			<a href="#" class="featured__category">cine</a>
-		</article>
-		<article class="featured__item item_c">
-			
-			<a class="block-6__link" href="#"><img src="img/featured/3.jpg" alt=""></a>
-			<div class="featured__title">
-				<div class="meta-tags meta-tags--featured">
-					<p class="meta-tags__autor"><i class="fa-regular fa-circle-user"></i><span>Cosme Fulanito</span></p>
-					<p class="meta-tags__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
-				</div>
-				<h3>El remake de The Witcher será de mundo abierto</h3>
-			</div>
-			<a href="#" class="featured__category">videojuegos</a>
-		</article>
+				<a href="#" class="featured__category">videojuegos</a>
+			</article>
+		</div>
 	</section>
     <main class="main">
-		
 		<section class="block-5">
 			<div class="section-header">
 				<h4>Noticias</h4>
@@ -524,7 +526,7 @@
 							<p class="meta-tags__autor"><i class="fa-regular fa-circle-user"></i><span>Cosme Fulanito</span></p>
 							<p class="meta-tags__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
 						</div>
-						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum in ab quia animi voluptatum iusto optio sequi, quo, laboriosam nam quas totam eum perferendis soluta officiis aspernatur? Esse eligendi placeat illo eum nisi, quo reprehenderit labore temporibus porro, praesentium, est quam sequi?
+						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum in ab quia animi voluptatum iusto optio sequi, quo, laboriosam nam quas totam eum perferendis soluta officiis aspernatur? Esse eligendi placeat illo eum nisi, quo reprehenderit labore temporibus porro.
 						</p>
 					</div>
 				</article>
@@ -540,7 +542,7 @@
 							<p class="meta-tags__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
 						</div>
 						
-						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam eveniet dolores temporibus accusamus, odio autem natus possimus? Reiciendis quo dolorem repudiandae quos veritatis pariatur voluptatem vel porro consequatur aliquid sit quis aliquam velit tempora culpa mollitia, qui expedita ad ea?
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam eveniet dolores temporibus accusamus, odio autem natus possimus? Reiciendis quo dolorem repudiandae quos veritatis pariatur voluptatem vel porro consequatur aliquid sit quis.
 						</p>
 					</div>
 				</article>
@@ -554,7 +556,7 @@
 							<p class="meta-tags__autor"><i class="fa-regular fa-circle-user"></i><span>Cosme Fulanito</span></p>
 							<p class="meta-tags__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
 						</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad tempora tenetur esse soluta veniam quae, possimus hic aut obcaecati eius ut modi sint minus voluptates, quis aperiam perspiciatis mollitia numquam suscipit consectetur iste? Impedit temporibus minus deleniti, molestiae nemo atque delectus laudantium.
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad tempora tenetur esse soluta veniam quae, possimus hic aut obcaecati eius ut modi sint minus voluptates, quis aperiam perspiciatis mollitia numquam suscipit consectetur iste?
 						</p>
 					</div>
 				</article>
@@ -563,57 +565,6 @@
 			<div class="block-1__button">Cargar mas</div>
 		</section>
 
-		<!-- <section class="block">
-			<div class="block__header">
-				<h4>Ultimos Articulos</h4>
-			</div>
-			<div class="block__content">
-				<article class="post">
-					<div class="post__thumbnaill">
-						<a href="#"><img class="img" src="img/article/article_a.jpg" alt=""></a> 
-					</div>
-					<div class="post__content">
-						<h3 class="post__title"><a href="#">¿Cómo leer comics digitales?</a></h3>
-						<div class="meta-tags">
-							<p class="meta-tags__autor"><i class="fa-regular fa-circle-user"></i><span>Cosme Fulanito</span></p>
-							<p class="meta-tags__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
-						</div>
-						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum in ab quia animi voluptatum iusto optio sequi, quo, laboriosam nam quas totam eum perferendis soluta officiis aspernatur? Esse eligendi placeat illo eum nisi, quo reprehenderit labore temporibus porro, praesentium, est quam sequi?
-						</p>
-					</div>
-				</article>
-				<article class="post">
-					<div class="post__thumbnaill">
-						<a href="#"><img class="img" src="img/article/article_a.jpg" alt=""></a> 
-					</div>
-					<div class="post__content">
-						<h3 class="post__title"><a href="#">¿Cómo comenzar una colección Funko Pop?</a></h3>
-						<div class="meta-tags">
-							<p class="meta-tags__autor"><i class="fa-regular fa-circle-user"></i><span>Cosme Fulanito</span></p>
-							<p class="meta-tags__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
-						</div>
-						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam eveniet dolores temporibus accusamus, odio autem natus possimus? Reiciendis quo dolorem repudiandae quos veritatis pariatur voluptatem vel porro consequatur aliquid sit quis aliquam velit tempora culpa mollitia, qui expedita ad ea?
-						</p>
-					</div>
-				</article>
-				<article class="post">
-					<div class="post__thumbnaill">
-						<a href="#"><img class="img" src="img/article/article_a.jpg" alt=""></a> 
-					</div>
-					<div class="post__content">
-						<h3 class="post__title"><a href="#">¿Cómo clasificar tus cómics y ordenar tu biblioteca?</a></h3>
-						<div class="meta-tags">
-							<p class="meta-tags__autor"><i class="fa-regular fa-circle-user"></i><span>Cosme Fulanito</span></p>
-							<p class="meta-tags__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
-						</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad tempora tenetur esse soluta veniam quae, possimus hic aut obcaecati eius ut modi sint minus voluptates, quis aperiam perspiciatis mollitia numquam suscipit consectetur iste? Impedit temporibus minus deleniti, molestiae nemo atque delectus laudantium.
-						</p>
-					</div>
-				</article>
-				
-			</div>
-			<div class="block__pagination">Cargar mas</div>
-		</section> -->
 	</section>
 	<aside class="sidebar2">
 		<div class="sidebar__content">
@@ -697,13 +648,11 @@
 		</div>
 	</div>
 
-	<footer class="footer">
-		
+	<footer class="">
+		<div class="container footer">
 			<section class="about">
-				<div class="about__logo">
-					<img src="img/zonageek-logo.png">
-				</div>
-				<div class="about__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt expedita natus quisquam maiores aspernatur perspiciatis.</div>
+				<img class="about__logo" src="img/zonageek-logo.png">
+				<p class="about__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt expedita natus quisquam maiores aspernatur perspiciatis.</p>
 			</section>
 			<section class="social-footer">
 				<h4 class="newsletter__title">Redes Sociales</h4>
@@ -721,10 +670,12 @@
 				<input class="newsletter__email" type="email" name="" id="" placeholder="Your email adress here">
 				<input class="newsletter__button" type="submit" value="Suscribe">
 			</section>
-		
+		</div>
 		<section class="subfooter">
-			<p>ZonaGeek - TPO Codo a Codo 2022</p>
-			<p>Erik Medina</p>
+			<div class="container">
+				<p>ZonaGeek - TPO Codo a Codo 2022</p>
+				<p>Erik Medina</p>
+			</div>
 		</section>
 </footer>
 
