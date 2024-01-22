@@ -16,7 +16,15 @@
 </head>
 <body>
 	<header class="header">
-		<div class="container brand"><a href="#"><img src="img/zonageek-logo.png"></a></div>
+		<div class="container header__brand">
+			<a href="#"><img src="img/zonageek-logo.png"></a>
+			<div class="header__social">
+				<a href="#"><i class="fa-brands fa-facebook"></i></a>
+				<a href="#"><i class="fa-brands fa-twitter"></i></a>
+				<a href="#"><i class="fa-brands fa-instagram"></i></a>
+				<a href="#"><i class="fa-brands fa-youtube"></i></a>
+			</div>
+		</div>
 	</header>
 	<nav class="nav">
 		<div class="container">
@@ -28,47 +36,48 @@
 				<li><a href="#">Listas</a></li>
 				<li><a href="#">Articulos</a></li>
 				<li><a href="#">Contacto</a></li>
+				<li><i class="fa-solid fa-magnifying-glass"></i></li>
 			</ul>
+			<div class="nav__switch">dark</div>
 		</div>
 	</nav>
     
-
     <section class="featured">
-			<article class="featured__item item_a">
-				<a class="block-6__link" href="#"><img class="img" src="img/featured/1.jpg" alt=""></a>
-				<div class="featured__title">
-					<div class="meta-tags meta-tags--featured">
-						<p class="meta-tags__autor"><i class="fa-regular fa-circle-user"></i><span>Cosme Fulanito</span></p>
-						<p class="meta-tags__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
-					</div>
-					<a href=""><h3>La temporada 2 de Loki finalmente tiene fecha de estreno</h3></a>
-					
+		<article class="featured__item item_a">
+			<a class="block-6__link" href="#"><img class="img" src="img/featured/1.jpg" alt=""></a>
+			<div class="featured__title">
+				<div class="meta-tags meta-tags--featured">
+					<p class="meta-tags__autor"><i class="fa-regular fa-circle-user"></i><span>Cosme Fulanito</span></p>
+					<p class="meta-tags__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
 				</div>
-				<a href="#categoria-television" class="featured__category">television</a>
-			</article>
-			<article class="featured__item item_b">
-				<a class="block-6__link" href="#"><img class="fu2" src="img/featured/2.jpg" alt=""></a>
-				<div class="featured__title">
-					<div class="meta-tags meta-tags--featured">
-						<p class="meta-tags__autor"><i class="fa-regular fa-circle-user"></i><span>Cosme Fulanito</span></p>
-						<p class="meta-tags__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
-					</div>
-					<h3>Alita: Battle Angel podría tener una secuela después de todo</h3>
-				</div>
-				<a href="#" class="featured__category">cine</a>
-			</article>
-			<article class="featured__item item_c">
+				<a href=""><h1>La temporada 2 de Loki finalmente tiene fecha de estreno</h1></a>
 				
-				<a class="block-6__link" href="#"><img src="img/featured/3.jpg" alt=""></a>
-				<div class="featured__title">
-					<div class="meta-tags meta-tags--featured">
-						<p class="meta-tags__autor"><i class="fa-regular fa-circle-user"></i><span>Cosme Fulanito</span></p>
-						<p class="meta-tags__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
-					</div>
-					<h3>El remake de The Witcher será de mundo abierto</h3>
+			</div>
+			<a href="#categoria-television" class="featured__category">television</a>
+		</article>
+		<article class="featured__item item_b">
+			<a class="block-6__link" href="#"><img class="fu2" src="img/featured/2.jpg" alt=""></a>
+			<div class="featured__title">
+				<div class="meta-tags meta-tags--featured">
+					<p class="meta-tags__autor"><i class="fa-regular fa-circle-user"></i><span>Cosme Fulanito</span></p>
+					<p class="meta-tags__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
 				</div>
-				<a href="#" class="featured__category">videojuegos</a>
-			</article>
+				<a href=""><h1>Alita: Battle Angel podría tener una secuela después de todo</h1></a>
+			</div>
+			<a href="#" class="featured__category">cine</a>
+		</article>
+		<article class="featured__item item_c">
+			
+			<a class="block-6__link" href="#"><img src="img/featured/3.jpg" alt=""></a>
+			<div class="featured__title">
+				<div class="meta-tags meta-tags--featured">
+					<p class="meta-tags__autor"><i class="fa-regular fa-circle-user"></i><span>Cosme Fulanito</span></p>
+					<p class="meta-tags__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
+				</div>
+				<a href=""><h1>El remake de The Witcher será de mundo abierto</h1></a>
+			</div>
+			<a href="#" class="featured__category">videojuegos</a>
+		</article>
 	</section>
 	<div class="container content">
     <main class="main">
@@ -223,7 +232,7 @@
 				<div class="block-4__thumbnaill">
 					<img class="img" src="img/slider/1.jpg" alt="">
 					<div class="block-4__content">
-						<p class="block-4__date"><i class="fa-regular fa-clock"></i><span>??, 2023</span></p>
+						<p class="block-4__date"><i class="fa-regular fa-clock"></i><span>Feb 05, 2023</span></p>
 						<p class="block-4__title">Invasion Secreta</p>
 					</div>
 				</div>
