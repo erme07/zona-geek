@@ -28,7 +28,9 @@
 	</header>
 	<nav class="nav">
 		<div class="container">
-			<!-- <div class="nav__logo"></div> -->
+			<div class="nav__logo">
+				<img src="img/zonageek-logo.png" alt="">
+			</div>
 			<ul class="nav__menu">
 				<li><a href="#">Inicio</a></li>
 				<li><a href="#">Noticias</a></li>
@@ -44,7 +46,7 @@
     
     <section class="featured">
 		<article class="featured__item item_a">
-			<a class="block-6__link" href="#"><img class="img" src="img/featured/1.jpg" alt=""></a>
+			<a class="featured__image" href="#"><img class="img" src="img/featured/1.jpg" alt=""></a>
 			<div class="featured__title">
 				<div class="meta-tags meta-tags--featured">
 					<p class="meta-tags__autor"><i class="fa-regular fa-circle-user"></i><span>Cosme Fulanito</span></p>
@@ -56,7 +58,7 @@
 			<a href="#categoria-television" class="featured__category">television</a>
 		</article>
 		<article class="featured__item item_b">
-			<a class="block-6__link" href="#"><img class="fu2" src="img/featured/2.jpg" alt=""></a>
+			<a class="featured__image" href="#"><img class="img" src="img/featured/2.jpg" alt=""></a>
 			<div class="featured__title">
 				<div class="meta-tags meta-tags--featured">
 					<p class="meta-tags__autor"><i class="fa-regular fa-circle-user"></i><span>Cosme Fulanito</span></p>
@@ -68,7 +70,7 @@
 		</article>
 		<article class="featured__item item_c">
 			
-			<a class="block-6__link" href="#"><img src="img/featured/3.jpg" alt=""></a>
+			<a class="featured__image" href="#"><img class="img" src="img/featured/3.jpg" alt=""></a>
 			<div class="featured__title">
 				<div class="meta-tags meta-tags--featured">
 					<p class="meta-tags__autor"><i class="fa-regular fa-circle-user"></i><span>Cosme Fulanito</span></p>
@@ -81,11 +83,10 @@
 	</section>
 	<div class="container content">
     <main class="main">
-		<section class="block-5">
-			<div class="section-header">
+		<section class="section">
+			<div class="section__header">
 				<h4>Noticias</h4>
-				<div class="block-5__filter">
-					
+				<div class="section__filter">
 					<span class="selected">cine</span>
 					<span>television</span>
 					<span>comics</span>
@@ -94,7 +95,7 @@
 					<span>Manga</span>
 				</div>
 			</div>
-			<div class="block-5__container">
+			<div class="block-5">
 				<article class="block-5__post">
 					<div class="block-5__thumbnail">
 						<a href="#"><img class="img" src="img/news/1.jpg" alt=""></a>
@@ -147,16 +148,16 @@
 				</article>
 				
 			</div>
-			<div class="block-5__pagination">
-				<a class="block-5__button block-5__button--prev" href="#"><span><i class="fa-solid fa-chevron-left"></i></span>Anterior</a>
-				<a class="block-5__button block-5__button--next" href="#">Siguiente <span><i class="fa-solid fa-chevron-right"></i></span></a>
+			<div class="section__pagination">
+				<a class="section__pagination__button section__pagination__button--prev" href="#"><span><i class="fa-solid fa-chevron-left"></i></span>Anterior</a>
+				<a class="section__pagination__button section__pagination__button--next" href="#">Siguiente <span><i class="fa-solid fa-chevron-right"></i></span></a>
 			</div>
 		</section>
 
-		<section class="block-6">
-			<div class="section-header">
+		<section class="section">
+			<div class="section__header">
 				<h4>Reseñas</h4>
-				<div class="block-5__filter">
+				<div class="section__filter">
 					<span class="selected">cine</span>
 					<span>television</span>
 					<span>comics</span>
@@ -165,65 +166,54 @@
 					<span>Manga</span>
 				</div>
 			</div>
-			<div class="block-6__container">
+			<div class="block-6">
 				<article class="block-6__post">
-					<div class="block-6__thumbnaill">
-						<img class="img" src="img/review/1.jpg" alt="">
-						<a class="block-6__link" href="#"></a>
+						<a class="" href="#"><img class="img" src="img/review/1.jpg" alt=""></a>
 						<div class="block-6__content">
 							<p class="block-6__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
-							<p class="block-6__title">Black Panther: Wakanda Forever</p>
+							<a href=""><h2 class="block-6__title">Black Panther: Wakanda Forever</h2></a>
 						</div>
-					</div>
-					<svg class="reseña-porcentaje" width="80" height="80">
-						<circle r="30" cx="40" cy="40" class="track"></circle>
-						<text x="40" y="47">8.5</text>
-						<circle r="30" cx="40" cy="40" class="progreso ochentacinco"></circle>
+					<svg class="score" width="80" height="80">
+						<circle r="30" cx="40" cy="40" class="score__box"></circle>
+						<text class="score__number" x="40" y="47">8.5</text>
+						<circle r="30" cx="40" cy="40" class="score__progress ochentacinco"></circle>
 					</svg>
 				</article>
 				<article class="block-6__post">
-					<div class="block-6__thumbnaill">
-						<img class="img" src="img/review/2.jpg" alt="">
-						<a class="block-6__link" href="#"></a>
+						<a class="" href="#"><img class="img" src="img/review/2.jpg" alt=""></a>
 						<div class="block-6__content">
 							<p class="block-6__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
-							<p class="block-6__title">Dr. Strange In The Multiverse of Madness</p>
+							<a href=""><h2 class="block-6__title">Dr. Strange In The Multiverse of Madness</h2></a>
 						</div>
-					</div>
-					<svg class="reseña-porcentaje" width="80" height="80">
-						<circle r="30" cx="40" cy="40" class="track"></circle>
-						<text x="40" y="47">5.0</text>
-						<circle r="30" cx="40" cy="40" class="progreso cincuenta"></circle>
+					<svg class="score" width="80" height="80">
+						<circle r="30" cx="40" cy="40" class="score__box"></circle>
+						<text class="score__number" x="40" y="47">5.0</text>
+						<circle r="30" cx="40" cy="40" class="score__progress cincuenta"></circle>
 					</svg>
 				</article>
 				<article class="block-6__post">
-					<div class="block-6__thumbnaill">
-						<img class="img" src="img/review/3.jpg" alt="">
-						<a class="block-6__link" href="#"></a>
+						<a class="block-6__link" href="#"><img class="img" src="img/review/3.jpg" alt=""></a>
 						<div class="block-6__content">
 							<p class="block-6__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
-							
-							<p class="block-6__title">Venom: Let There Be Carnage</p>
+							<a href=""><h2 class="block-6__title">Venom: Let There Be Carnage</h2></a>
 						</div>
-					</div>
-					
-					<svg class="reseña-porcentaje" width="80" height="80">
-						<circle r="30" cx="40" cy="40" class="track"></circle>
-						<text x="40" y="47">2.5</text>
-						<circle r="30" cx="40" cy="40" class="progreso veinticinco"></circle>
+					<svg class="score" width="80" height="80">
+						<circle r="30" cx="40" cy="40" class="score__box"></circle>
+						<text class="score__number" x="40" y="47">2.5</text>
+						<circle r="30" cx="40" cy="40" class="score__progress veinticinco"></circle>
 					</svg>
 				</article>
 			</div>
-			<div class="block-5__pagination">
-				<a class="block-5__button block-5__button--prev" href="#"><span><i class="fa-solid fa-chevron-left"></i></span>Anterior</a>
-				<a class="block-5__button block-5__button--next" href="#">Siguiente <span><i class="fa-solid fa-chevron-right"></i></span></a>
+			<div class="section__pagination">
+				<a class="section__pagination__button section__pagination__button--prev" href="#"><span><i class="fa-solid fa-chevron-left"></i></span>Anterior</a>
+				<a class="section__pagination__button section__pagination__button--next" href="#">Siguiente <span><i class="fa-solid fa-chevron-right"></i></span></a>
 			</div>
 		</section>
 		
 	</main>
 
-	<section class="block-4">
-		<div class="section-header">
+	<section class="section block-4">
+		<div class="section__header">
 			<h4>Cartelera</h4>
 			<div class="block-4__buttons"><i class="fa-solid fa-chevron-left next blocked"></i><i class="fa-solid fa-chevron-right prev"></i></div>
 		</div>
@@ -314,12 +304,12 @@
 
 	<aside class="sidebar">
 		<div class="sidebar__content">
-			<section class="social-bar">
-				<div class="section-header">
+			<section class="section">
+				<div class="section__header">
 					<h4>Siguenos</h4>
 					<i class="fa-regular fa-thumbs-up"></i>
 				</div>
-				<div class="social-bar__content">
+				<div class="social-bar">
 					<div class="social-bar__item social-bar__item--facebook">
 						<i class="fa-brands fa-facebook"></i>
 						<div class="social-bar__count">
@@ -352,46 +342,46 @@
 					</div>
 				</div>
 			</section>
-			<section class="block-2">
-				<div class="section-header">
+			<section class="section">
+				<div class="section__header">
 					<h4>Mas Popular</h4>
 					<i class="fa-solid fa-fire"></i>
 				</div>
-				<div class="block-2__container">
-					<div class="block-2__item">
-						<div class="block-2__thumbnaill">
+				<div class="trending">
+					<div class="trending__item" data-position="1">
+						<div class="trending__thumbnaill">
 							<a href=""><img class="img" src="img/anime/2.jpg" alt=""></a>
 						</div>
-						<div class="block-2__content">
-							<h4 class="block-2__title"><a href="">El orden correcto para ver el anime de Naruto</a></h4>
-							<p class="block-2__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
+						<div class="trending__content">
+							<h2 class="trending__title"><a href="">El orden correcto para ver el anime de Naruto</a></h2>
+							<p class="trending__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
 						</div>
 					</div>
-					<div class="block-2__item">
-						<div class="block-2__thumbnaill">
+					<div class="trending__item" data-position="2">
+						<div class="trending__thumbnaill">
 							<a href=""><img class="img" src="img/article/article_b.jpg" alt=""></a>
 						</div>
-						<div class="block-2__content">
-							<h4 class="block-2__title"><a href="">¿Cómo comenzar una colección Funko Pop?</a></h4>
-							<p class="block-2__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
+						<div class="trending__content">
+							<h2 class="trending__title"><a href="">¿Cómo comenzar una colección Funko Pop?</a></h2>
+							<p class="trending__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
 						</div>
 					</div>
-					<div class="block-2__item">
-						<div class="block-2__thumbnaill">
+					<div class="trending__item" data-position="3">
+						<div class="trending__thumbnaill">
 							<a href=""><img class="img" src="img/featured/2.jpg" alt=""></a>
 						</div>
-						<div class="block-2__content">
-							<h4 class="block-2__title"><a href="">Alita: Battle Angel podría tener una secuela después de todo</a></h4>
-							<p class="block-2__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
+						<div class="trending__content">
+							<h2 class="trending__title"><a href="">Alita: Battle Angel podría tener una secuela después de todo</a></h2>
+							<p class="trending__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
 						</div>
 					</div>
-					<div class="block-2__item">
-						<div class="block-2__thumbnaill">
+					<div class="trending__item" data-position="4">
+						<div class="trending__thumbnaill">
 							<a href=""><img class="img" src="img/tops/list_a.jpg" alt=""></a>
 						</div>
-						<div class="block-2__content">
-							<h4 class="block-2__title"><a href="">Las 15 frases mas inspiradoras del Capitán América</a></h4>
-							<p class="block-2__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
+						<div class="trending__content">
+							<h2 class="trending__title"><a href="">Las 15 frases mas inspiradoras del Capitán América</a></h2>
+							<p class="trending__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
 						</div>
 					</div>
 				</div>
@@ -441,94 +431,81 @@
 
 	<div class="container content">
 		<section class="main2">
-	
 			<!-- seccion de listas -->
-			<section class="block-6">
-				<div class="section-header">
+			<section class="section">
+				<div class="section__header">
 					<h4>Listas - Tops</h4>
 				</div>
-				<div class="block-6__container">
+				<div class="block-6">
 					<article class="block-6__post">
 						<div class="block-6__thumbnaill">
-							<img class="img" src="img/tops/list_a.jpg" alt="">
-							<a class="block-6__link" href="#"></a>
+							<a class="" href="#"><img class="img" src="img/tops/list_a.jpg" alt=""></a>
 							<div class="block-6__content">
 								<p class="block-6__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
-								<h4 class="block-6__title">Las 15 frases mas inspiradoras del Capitán América</h4>
+								<a href=""><h2 class="block-6__title">Las 15 frases mas inspiradoras del Capitán América</h2></a>
 							</div>
 						</div>
 					</article>
 					<article class="block-6__post">
 						<div class="block-6__thumbnaill">
-							<img class="img" src="img/tops/list_b.jpg" alt="">
-							<a class="block-6__link" href="#"></a>
+							<a class="" href="#"><img class="img" src="img/tops/list_b.jpg" alt=""></a>
 							<div class="block-6__content">
 								<p class="block-6__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
-								<h4 class="block-6__title">Los 10 sacrificios más trágicos de la Liga de la Justicia</h4>
+								<a href=""><h2 class="block-6__title">Los 10 sacrificios más trágicos de la Liga de la Justicia</h2></a>
 							</div>
 						</div>
 					</article>
 					<article class="block-6__post">
 						<div class="block-6__thumbnaill">
-							<img class="img" src="img/tops/list_c.jpg" alt="">
-							<a class="block-6__link" href="#"></a>
+							<a class="" href="#"><img class="img" src="img/tops/list_c.jpg" alt=""></a>
 							<div class="block-6__content">
 								<p class="block-6__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
-								<h4 class="block-6__title">Los 15 mejores villanos de She-Hulk</h4>
+								<a href=""><h2 class="block-6__title">Los 15 mejores villanos de She-Hulk</h2></a>
 							</div>
 						</div>
 					</article>
 				</div>
-				<!-- <div class="block-5__pagination">
-					<a class="block-5__button block-5__button--prev" href="#"><span><i class="fa-solid fa-chevron-left"></i></span>Anterior</a>
-					<a class="block-5__button block-5__button--next" href="#">Siguiente <span><i class="fa-solid fa-chevron-right"></i></span></a>
-				</div> -->
 			</section>
 	
-			<section class="block-6">
-				<div class="section-header">
+			<section class="section">
+				<div class="section__header">
 					<h4>Anime - Manga</h4>
 				</div>
-				<div class="block-6__container">
+				<div class="block-6">
 					<article class="block-6__post">
-						<div class="block-6__thumbnaill">
-							<img class="img" src="img/anime/2.jpg" alt="">
-							<a class="block-6__link" href="#"></a>
-							<div class="block-6__content">
-								<p class="block-6__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
-								<h4 class="block-6__title"><a href="#">El orden correcto para ver el anime de Naruto</a></h4>
-							</div>
+						<a href="#uuuuu"><img class="img" src="img/anime/2.jpg" alt=""></a>
+						<div class="block-6__content">
+							<p class="block-6__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
+							<a href="#0000"><h2 class="block-6__title">El orden correcto para ver el anime de Naruto</h2></a>
 						</div>
 					</article>
 					<article class="block-6__post">
-						<div class="block-6__thumbnaill">
-							<img class="img" src="img/anime/1.jpg" alt="">
-							<a class="block-6__link" href="#"></a>
-							<div class="block-6__content">
-								<p class="block-6__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
-								<h4 class="block-6__title"><a href="#">El autor de Yu-Gi-Oh! publicará un manga de Spider-Man y Iron Man</a></h4>
-							</div>
+						<a href="#uuuuu"><img class="img" src="img/anime/1.jpg" alt=""></a>
+						<div class="block-6__content">
+							<p class="block-6__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
+							<a href="#0000">
+								<h2 class="block-6__title">El autor de Yu-Gi-Oh! publicará un manga de Spider-Man y Iron Man</h2>
+							</a>
 						</div>
 					</article>
 					<article class="block-6__post">
-						<div class="block-6__thumbnaill">
-							<img class="img" src="img/anime/3.jpg" alt="">
-							<a class="block-6__link" href="#"></a>
-							<div class="block-6__content">
-								<p class="block-6__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
-								<h4 class="block-6__title"><a href="#">Lo que viene luego de Dragon Ball Super</a></h4>
-							</div>
+						<a href="#uuuuu"><img class="img" src="img/anime/3.jpg" alt=""></a>
+						<div class="block-6__content">
+							<p class="block-6__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
+							<a href="#0000">
+								<h2 class="block-6__title">Lo que viene luego de Dragon Ball Super</h2>
+							</a>
 						</div>
 					</article>
 				</div>
 			</section>
 	
 			<!-- seccion de articulos -->
-			<section class="block-1">
-				<div class="section-header">
+			<section class=" section">
+				<div class="section__header">
 					<h4>Ultimos Articulos</h4>
 				</div>
-				<div class="block-1__container">
+				<div class="block-1">
 					<article class="block-1__post">
 						<div class="block-1__thumbnaill">
 							<a href="#"><img class="img" src="img/article/article_a.jpg" alt=""></a> 
@@ -581,53 +558,53 @@
 		</section>
 		<aside class="sidebar2">
 			<div class="sidebar__content">
-				<section class="block-2">
-					<div class="section-header">
+				<section class="section">
+					<div class="section__header">
 						<h4>Ultimos comentarios</h4>
 						<i class="fa-regular fa-comment"></i>
 					</div>
-					<div class="block-2__container">
-						<div class="block-7__item">
-							<div class="block-7__thumbnaill">
+					<div class="comments">
+						<div class="comments__item">
+							<div class="comments__thumbnaill">
 								<img class="img" src="img/avatar/user_a.jpg" alt="">
 							</div>
-							<div class="block-7__content">
-								<p class="block-7__message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exe esse animi eius?</p>
-								<div class="meta-tags meta-tags--block-7">
+							<div class="comments__content">
+								<p class="comments__message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exe esse animi eius?</p>
+								<div class="meta-tags meta-tags--comments">
 									<p class="meta-tags__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
 								</div>
 							</div>
 						</div>
-						<div class="block-7__item">
-							<div class="block-7__thumbnaill">
+						<div class="comments__item">
+							<div class="comments__thumbnaill">
 								<img class="img" src="img/avatar/user_b.jpg" alt="">
 							</div>
-							<div class="block-7__content">
-								<p class="block-7__message">Lorem ipsum dolor sit amet elit.  Esse animi, quod iure facilis?</p>
-								<div class="meta-tags meta-tags--block-7">
+							<div class="comments__content">
+								<p class="comments__message">Lorem ipsum dolor sit amet elit.  Esse animi, quod iure facilis?</p>
+								<div class="meta-tags meta-tags--comments">
 									<p class="meta-tags__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
 								</div>
 							</div>
 						</div>
-						<div class="block-7__item">
-							<div class="block-7__thumbnaill">
+						<div class="comments__item">
+							<div class="comments__thumbnaill">
 								<img class="img" src="img/avatar/user_c.jpg" alt="">
 							</div>
-							<div class="block-7__content">
-								<p class="block-7__message">Lorem ipsum dolor sit amet consectetur adipisicing elit, quod iure facilis?</p>
-								<div class="meta-tags meta-tags--block-7">
+							<div class="comments__content">
+								<p class="comments__message">Lorem ipsum dolor sit amet consectetur adipisicing elit, quod iure facilis?</p>
+								<div class="meta-tags meta-tags--comments">
 									<p class="meta-tags__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
 								</div>
 							</div>
 						</div>
 					</div>
 			</section>
-			<section class="block-insta">
-				<div class="section-header">
+			<section class="section">
+				<div class="section__header">
 					<h4>Instagram</h4>
 					<i class="fa-brands fa-instagram"></i>
 				</div>
-				<div class="block-insta__feed">
+				<div class="block-insta">
 					<div class="block-insta__photo">
 						<img class="img" src="img/instagram/insta1.jpg" alt="">
 					</div>
@@ -647,10 +624,6 @@
 						<img class="img" src="img/instagram/insta6.jpg" alt="">
 					</div>
 				</div>
-				<!-- <div class="block-insta__links">
-					<div class="block-insta__follow"></div>
-					<div class="block-insta__load-more"></div>
-				</div> -->
 			</section>
 			</div>
 		</aside>
@@ -662,14 +635,14 @@
 		</div>
 	</div>
 
-	<footer class="">
-		<div class="container footer">
+	<footer class="footer">
+		<div class="container">
 			<section class="about">
 				<img class="about__logo" src="img/zonageek-logo.png">
 				<p class="about__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt expedita natus quisquam maiores aspernatur perspiciatis.</p>
 			</section>
 			<section class="social-footer">
-				<h4 class="newsletter__title">Redes Sociales</h4>
+				<h4 class="social__title">Redes Sociales</h4>
 				<div class="social-footer__container">
 					<div class="social-footer__item"><i class="fa-brands fa-square-facebook"></i><p>Sigue nuestra Fanpage</p></div>
 					<div class="social-footer__item"><i class="fa-brands fa-instagram"></i><p>Siguenos en Instagram</p></div>
