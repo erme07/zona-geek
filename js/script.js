@@ -1,4 +1,5 @@
 const navBar = document.querySelector(".nav")
+const navLogo= document.querySelector(".nav__logo");
 const slider= document.getElementById("slider");
 const next = document.querySelector(".next");
 const prev = document.querySelector(".prev");
@@ -22,7 +23,17 @@ const posicionarNavBar = () => {
     if (posicionY > scrollY && scrollY > navbarOffset + navBarHeight)
         //subiendo
         navBar.classList.add('nav--show');
-    else
+    else if (posicionY > scrollY && scrollY < navbarOffset) {
+        //subiendo y se pasa del navbar
+        navBar.classList.remove('nav--show');
+        navLogo.classList.remove('nav__logo--show');
+    }
+    else if (posicionY < scrollY && scrollY > navbarOffset + navBarHeight) {
+        //bajando y se pasa del navbar
+        navLogo.classList.add('nav__logo--show');
+        navBar.classList.remove('nav--show');
+    }
+    else if(posicionY < scrollY)
         //bajando
         navBar.classList.remove('nav--show');
     posicionY = scrollY;
@@ -31,7 +42,7 @@ const posicionarNavBar = () => {
 
 document.addEventListener('scroll', () => {
     showButton();
-    // posicionarNavBar();
+    posicionarNavBar();
 })
 
 //::::::::::::::::::  Slider ::::::::::::::::::::::::
@@ -71,8 +82,14 @@ prev.addEventListener('click', ()=>{
     if(contador>=slider.childElementCount-5) prev.classList.add("blocked");
 })
 
+let radio = 30;
+let circunferencia = 2 * Math.PI * radio;
+let progreso = 0;
 
-// Animcaion circular barra :::::::::::::
+let strokeDashoffset = circunferencia * (1 - progreso / 100);
+console.log(strokeDashoffset)
+
+// //Animcaion circular barra :::::::::::::
 // window.onload=()=>{
 //     let numero = document.getElementsByName("puntaje");
 //     let count=5;
