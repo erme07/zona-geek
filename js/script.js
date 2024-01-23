@@ -7,7 +7,7 @@ const buttonTop = document.querySelector('.button-top');
 
 
 let posicionY = 0;
-let navbarOffset = navBar.getBoundingClientRect().top;
+let navbarOffset = document.querySelector('.header').offsetHeight;
 let navBarHeight = navBar.offsetHeight;
 
 const showButton = () => {
@@ -82,26 +82,67 @@ prev.addEventListener('click', ()=>{
     if(contador>=slider.childElementCount-5) prev.classList.add("blocked");
 })
 
-let radio = 30;
+let radio = document.querySelector('.score__progress').r.baseVal.value;
+let cincoprogreso = 9.425;
 let circunferencia = 2 * Math.PI * radio;
-let progreso = 0;
+let progreso = 95;
 
 let strokeDashoffset = circunferencia * (1 - progreso / 100);
 console.log(strokeDashoffset)
 
-// //Animcaion circular barra :::::::::::::
-// window.onload=()=>{
-//     let numero = document.getElementsByName("puntaje");
-//     let count=5;
-//     setInterval(() =>{
-//         if(count<85){
-//             count+=5;
-//             if(count<51){
-//                 numero[1].innerHTML=((count/10)).toFixed(1);
-//             }
-//             numero[0].innerHTML=((count/10)).toFixed(1);
-//         }else{
-//             clearInterval();
-//         }
-//     },100);
-// }
+const circulos = Array.from(document.getElementsByClassName("score"));
+
+
+const incrementarValor = (circulos, tasa, tiempoTotal, valorMaximo) => {
+    circulos.forEach(circulo => {
+        let elemento = circulo.children[1];
+        let barra = circulo.children[2];
+        let valorActual = 0.0;
+        let valorFinal = parseFloat(elemento.getAttribute("data-number"));
+
+        // Calcula la duración del intervalo en función del valor final
+        let duracion = tiempoTotal / (valorFinal / tasa);
+
+        let radio = barra.r.baseVal.value;
+        let circunferencia = 2 * Math.PI * radio;
+        let intervalo = setInterval(() => {
+            valorActual += tasa;
+            valorActual = Math.round(valorActual * 10) / 10; // Redondea a la décima más cercana
+            if (valorActual <= valorFinal) {
+                elemento.innerHTML = (valorActual === 10) 
+                    ? elemento.innerHTML = Math.round(valorActual)
+                    : elemento.innerHTML = valorActual.toFixed(1);
+                let progreso = (valorActual / valorMaximo) * 100;
+                let strokeDashoffset = circunferencia * (1 - progreso / 100);
+                barra.style.strokeDashoffset = strokeDashoffset;
+                // Calcula el tono en función del valor actual, pero resta 3 y limita a un mínimo de 0
+                let tono = 120 * Math.max((valorActual - 2) / (valorMaximo - 2), 0); // 120 es verde en la escala HSL
+                //let tono = 120 * (valorActual / valorMaximo); // 120 es verde en la escala HSL
+                barra.style.stroke = `hsl(${tono}, 100%, 50%)`; // Saturación y luminosidad al 100% y 50% respectivamente
+            } else {
+                clearInterval(intervalo);
+            }
+        }, duracion);
+    });
+}
+
+
+let elemento = document.getElementById('prueba');
+let observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            console.log('El elemento es visible');
+            // Puedes detener la observación si ya no la necesitas
+            incrementarValor(circulos, 0.1, 2000, 10);
+            observer.unobserve(entry.target);
+        }
+        // else {
+        //     console.log('El elemento ya no es visible');
+        // }
+    });
+}, {
+    threshold: 0.5 // Detecta cuando el 50% del elemento es visible
+});
+
+// Inicia la observación del elemento
+observer.observe(elemento);
