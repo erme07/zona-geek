@@ -7,10 +7,8 @@
 	<link rel="icon" href="img/favicon.png">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Khand:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Khand:wght@400;700&family=Noto+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 	
-	<script src="https://kit.fontawesome.com/768709101c.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="css/style.css">
 	<title>ZonaGeek</title>
 </head>
@@ -19,10 +17,18 @@
 		<div class="container header__brand">
 			<a href="#"><img src="img/zonageek-logo.png"></a>
 			<div class="header__social">
-				<a href="#"><i class="fa-brands fa-facebook"></i></a>
-				<a href="#"><i class="fa-brands fa-twitter"></i></a>
-				<a href="#"><i class="fa-brands fa-instagram"></i></a>
-				<a href="#"><i class="fa-brands fa-youtube"></i></a>
+				<a href="">
+					<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-facebook" /></svg>
+				</a>
+				<a href="">
+					<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-x-twitter" /></svg>
+				</a>
+				<a href="">
+					<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-instagram" /></svg>
+				</a>
+				<a href="">
+					<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-youtube" /></svg>
+				</a>
 			</div>
 		</div>
 	</header>
@@ -38,9 +44,33 @@
 				<li><a href="#">Listas</a></li>
 				<li><a href="#">Articulos</a></li>
 				<li><a href="#">Contacto</a></li>
-				<li><i class="fa-solid fa-magnifying-glass"></i></li>
+				<li>
+					<a href="">
+						<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-search" /></svg>
+					</a>
+				</li>
 			</ul>
-			<div class="nav__switch">dark</div>
+			<div class="nav__switch">
+				<label class="switch">
+					<input class="switch__input" type="checkbox" role="switch" name="dark" />
+					<svg class="switch__icon" width="24px" height="24px" aria-hidden="true">
+						<use href="./img/icons/icons.svg#icon-light" />
+					</svg>
+					<svg class="switch__icon" width="24px" height="24px" aria-hidden="true">
+						<use href="./img/icons/icons.svg#icon-dark" />
+					</svg>
+					<span class="switch__inner"></span>
+					<span class="switch__inner-icons">
+						<svg class="switch__icon" width="24px" height="24px" aria-hidden="true">
+							<use href="./img/icons/icons.svg#icon-light" />
+						</svg>
+						<svg class="switch__icon" width="24px" height="24px" aria-hidden="true">
+							<use href="./img/icons/icons.svg#icon-dark" />
+						</svg>
+					</span>
+					<span class="switch__sr">Dark Mode</span>
+				</label>
+			</div>
 		</div>
 	</nav>
     
@@ -49,8 +79,12 @@
 			<a class="featured__image" href="#"><img class="img" src="img/featured/1.jpg" alt=""></a>
 			<div class="featured__title">
 				<div class="meta-tags meta-tags--featured">
-					<p class="meta-tags__autor"><i class="fa-regular fa-circle-user"></i><span>Cosme Fulanito</span></p>
-					<p class="meta-tags__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
+					<p class="meta-tags__autor">
+						<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-user" /></svg>
+						<span>Cosme Fulanito</span></p>
+					<p class="meta-tags__date">
+						<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+						<span>Nov 21, 2022</span></p>
 				</div>
 				<a href=""><h1>La temporada 2 de Loki finalmente tiene fecha de estreno</h1></a>
 				
@@ -61,8 +95,12 @@
 			<a class="featured__image" href="#"><img class="img" src="img/featured/2.jpg" alt=""></a>
 			<div class="featured__title">
 				<div class="meta-tags meta-tags--featured">
-					<p class="meta-tags__autor"><i class="fa-regular fa-circle-user"></i><span>Cosme Fulanito</span></p>
-					<p class="meta-tags__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
+					<p class="meta-tags__autor">
+						<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-user" /></svg>
+						<span>Cosme Fulanito</span></p>
+					<p class="meta-tags__date">
+						<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+						<span>Nov 21, 2022</span></p>
 				</div>
 				<a href=""><h1>Alita: Battle Angel podría tener una secuela después de todo</h1></a>
 			</div>
@@ -73,8 +111,12 @@
 			<a class="featured__image" href="#"><img class="img" src="img/featured/3.jpg" alt=""></a>
 			<div class="featured__title">
 				<div class="meta-tags meta-tags--featured">
-					<p class="meta-tags__autor"><i class="fa-regular fa-circle-user"></i><span>Cosme Fulanito</span></p>
-					<p class="meta-tags__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
+					<p class="meta-tags__autor">
+						<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-user" /></svg>
+						<span>Cosme Fulanito</span></p>
+					<p class="meta-tags__date">
+						<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+						<span>Nov 21, 2022</span></p>
 				</div>
 				<a href=""><h1>El remake de The Witcher será de mundo abierto</h1></a>
 			</div>
@@ -102,8 +144,12 @@
 					</div>
 					<div class="block-5__content">
 						<div class="meta-tags">
-							<p class="block-5__date"><i class="fa-regular fa-circle-user"></i><span>Cosme Fulanito</span></p>
-							<p class="block-5__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
+							<p class="meta-tags__autor">
+								<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-user" /></svg>
+								<span>Cosme Fulanito</span></p>
+							<p class="meta-tags__date">
+								<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+								<span>Nov 21, 2022</span></p>
 						</div>
 						
 						<h4 class="block-5__title block-5__title--first"><a href="">Black Adam podría no regresar para una secuela.</a></h4>
@@ -116,7 +162,10 @@
 					</div>
 					<div class="block-5__content">
 						<h4 class="block-5__title"><a href="">El último tráiler de Ant-Man 3 revela el diseño final de Kang.</a></h4>
-						<p class="block-5__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
+						<div class="block-5__date">
+							<svg class="icon"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+							<span>Nov 21, 2022</span>
+						</div>
 					</div>
 				</article>
 				<article class="block-5__post">
@@ -125,7 +174,10 @@
 					</div>
 					<div class="block-5__content">
 						<h4 class="block-5__title"><a href="">Wonder Woman no tendrá tercera parte.</a></h4>
-						<p class="block-5__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
+						<div class="block-5__date">
+							<svg class="icon"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+							<span>Nov 21, 2022</span>
+						</div>
 					</div>
 				</article>
 				<article class="block-5__post">
@@ -134,7 +186,10 @@
 					</div>
 					<div class="block-5__content">
 						<h4 class="block-5__title"><a href="">"Avatar: The Way of Water" ya tiene sus primeras criticas en línea.</a></h4>
-						<p class="block-5__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
+						<div class="block-5__date">
+							<svg class="icon"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+							<span>Nov 21, 2022</span>
+						</div>
 					</div>
 				</article>
 				<article class="block-5__post">
@@ -143,14 +198,22 @@
 					</div>
 					<div class="block-5__content">
 						<h4 class="block-5__title"><a href="">"Black Panther: Wakanda Forever" supera los 700M en recuadación.</a></h4>
-						<p class="block-5__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
+						<div class="block-5__date">
+							<svg class="icon"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+							<span>Nov 21, 2022</span>
+						</div>
 					</div>
 				</article>
 				
 			</div>
-			<div class="section__pagination">
-				<a class="section__pagination__button section__pagination__button--prev" href="#"><span><i class="fa-solid fa-chevron-left"></i></span>Anterior</a>
-				<a class="section__pagination__button section__pagination__button--next" href="#">Siguiente <span><i class="fa-solid fa-chevron-right"></i></span></a>
+			<div class="pagination">
+				<a class="pagination__button pagination__button--prev" href="#">
+					<span><svg class="icon"><use href="./img/icons/icons.svg#icon-arrow-left" /></svg></span>
+					Anterior
+				</a>
+				<a class="pagination__button pagination__button--next" href="#">Siguiente 
+					<span><svg class="icon"><use href="./img/icons/icons.svg#icon-arrow-right" /></svg></span>
+				</a>
 			</div>
 		</section>
 
@@ -166,186 +229,228 @@
 					<span>Manga</span>
 				</div>
 			</div>
-			<div class="block-6">
+			<div class="block-6" id="prueba">
 				<article class="block-6__post">
-						<a class="" href="#"><img class="img" src="img/review/1.jpg" alt=""></a>
-						<div class="block-6__content">
-							<p class="block-6__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
-							<a href=""><h2 class="block-6__title">Black Panther: Wakanda Forever</h2></a>
+					<a class="" href="#"><img class="img" src="img/review/1.jpg" alt=""></a>
+					<div class="block-6__content">
+						<div class="block-6__date">
+							<svg class="icon"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+							<span>Nov 21, 2022</span>
 						</div>
+						<a href=""><h2 class="block-6__title">Black Panther: Wakanda Forever</h2></a>
+					</div>
 					<svg class="score" width="80" height="80">
 						<circle r="30" cx="40" cy="40" class="score__box"></circle>
-						<text class="score__number" x="40" y="47">8.5</text>
-						<circle r="30" cx="40" cy="40" class="score__progress ochentacinco"></circle>
+						<text class="score__number" x="40" y="47" data-number="6.5">0.0</text>
+						<circle r="30" cx="40" cy="40" class="score__progress"></circle>
 					</svg>
 				</article>
 				<article class="block-6__post">
-						<a class="" href="#"><img class="img" src="img/review/2.jpg" alt=""></a>
-						<div class="block-6__content">
-							<p class="block-6__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
-							<a href=""><h2 class="block-6__title">Dr. Strange In The Multiverse of Madness</h2></a>
+					<a class="" href="#"><img class="img" src="img/review/2.jpg" alt=""></a>
+					<div class="block-6__content">
+						<div class="block-6__date">
+							<svg class="icon"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+							<span>Nov 21, 2022</span>
 						</div>
+						<a href=""><h2 class="block-6__title">Dr. Strange In The Multiverse of Madness</h2></a>
+					</div>
 					<svg class="score" width="80" height="80">
 						<circle r="30" cx="40" cy="40" class="score__box"></circle>
-						<text class="score__number" x="40" y="47">5.0</text>
-						<circle r="30" cx="40" cy="40" class="score__progress cincuenta"></circle>
+						<text class="score__number" x="40" y="47" data-number="8.5">0.0</text>
+						<circle r="30" cx="40" cy="40" class="score__progress"></circle>
 					</svg>
 				</article>
 				<article class="block-6__post">
-						<a class="block-6__link" href="#"><img class="img" src="img/review/3.jpg" alt=""></a>
-						<div class="block-6__content">
-							<p class="block-6__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
-							<a href=""><h2 class="block-6__title">Venom: Let There Be Carnage</h2></a>
+					<a class="block-6__link" href="#"><img class="img" src="img/review/3.jpg" alt=""></a>
+					<div class="block-6__content">
+						<div class="block-6__date">
+							<svg class="icon"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+							<span>Nov 21, 2022</span>
 						</div>
+						<a href=""><h2 class="block-6__title">Venom: Let There Be Carnage</h2></a>
+					</div>
 					<svg class="score" width="80" height="80">
 						<circle r="30" cx="40" cy="40" class="score__box"></circle>
-						<text class="score__number" x="40" y="47">2.5</text>
-						<circle r="30" cx="40" cy="40" class="score__progress veinticinco"></circle>
+						<text class="score__number" x="40" y="47" data-number="3.0">0.0</text>
+						<circle r="30" cx="40" cy="40" class="score__progress"></circle>
 					</svg>
 				</article>
 			</div>
-			<div class="section__pagination">
-				<a class="section__pagination__button section__pagination__button--prev" href="#"><span><i class="fa-solid fa-chevron-left"></i></span>Anterior</a>
-				<a class="section__pagination__button section__pagination__button--next" href="#">Siguiente <span><i class="fa-solid fa-chevron-right"></i></span></a>
+			<div class="pagination">
+				<a class="pagination__button pagination__button--prev" href="#">
+					<span><svg class="icon"><use href="./img/icons/icons.svg#icon-arrow-left" /></svg></span>
+					Anterior
+				</a>
+				<a class="pagination__button pagination__button--next" href="#">Siguiente 
+					<span><svg class="icon"><use href="./img/icons/icons.svg#icon-arrow-right" /></svg></span>
+				</a>
 			</div>
 		</section>
 		
-	</main>
-
-	<section class="section block-4">
-		<div class="section__header">
-			<h4>Cartelera</h4>
-			<div class="block-4__buttons"><i class="fa-solid fa-chevron-left next blocked"></i><i class="fa-solid fa-chevron-right prev"></i></div>
-		</div>
-		<div id="slider" class="block-4__container">
-			<div class="block-4__item">
-				<div class="block-4__thumbnaill">
+		<section class="section section--dark">
+			<div class="section__header">
+				<h4>Cartelera</h4>
+				<div class="block-4__buttons">
+					<svg class="icon next blocked" ><use href="./img/icons/icons.svg#icon-arrow-left" /></svg>
+					<svg class="icon prev" ><use href="./img/icons/icons.svg#icon-arrow-right" /></svg>
+				</div>
+			</div>
+			<div id="slider" class="block-4">
+				<div class="block-4__item">
+					
 					<img class="img" src="img/slider/1.jpg" alt="">
 					<div class="block-4__content">
-						<p class="block-4__date"><i class="fa-regular fa-clock"></i><span>Feb 05, 2023</span></p>
+						<div class="block-4__date">
+							<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+							<span>Feb 05, 2023</span>
+						</div>
 						<p class="block-4__title">Invasion Secreta</p>
 					</div>
+					
 				</div>
-			</div>
-			<div class="block-4__item">
-				<div class="block-4__thumbnaill">
+				<div class="block-4__item">
+					
 					<img class="img" src="img/slider/3.jpg" alt="">
 					<div class="block-4__content">
-						<p class="block-4__date"><i class="fa-regular fa-clock"></i><span>Feb 17, 2023</span></p>
+						<div class="block-4__date">
+							<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+							<span>Feb 17, 2023</span>
+						</div>
 						<p class="block-4__title">ANT-MAN AND THE WASP: QUANTUMANIA</p>
 					</div>
+					
 				</div>
-			</div>
-			<div class="block-4__item">
-				<div class="block-4__thumbnaill">
+				<div class="block-4__item">
+					
 					<img class="img" src="img/slider/2.jpg" alt="">
 					<div class="block-4__content">
-						<p class="block-4__date"><i class="fa-regular fa-clock"></i><span>Mar 17, 2023</span></p>
+						<div class="block-4__date">
+							<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+							<span>Mar 17, 2023</span>
+						</div>
 						<p class="block-4__title">¡SHAZAM! LA FURIA DE LOS DIOSES</p>
 					</div>
+					
 				</div>
-			</div>
-			<div class="block-4__item">
-				<div class="block-4__thumbnaill">
+				<div class="block-4__item">
+					
 					<img class="img" src="img/slider/7.jpg" alt="">
 					<div class="block-4__content">
-						<p class="block-4__date"><i class="fa-regular fa-clock"></i><span>May 05, 2023</span></p>
+						<div class="block-4__date">
+							<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+							<span>May 05, 2023</span>
+						</div>
 						<p class="block-4__title">Guardianes de la Galaxia Volumen 3</p>
 					</div>
+					
 				</div>
-			</div>
-			<div class="block-4__item">
-				<div class="block-4__thumbnaill">
+				<div class="block-4__item">
+					
 					<img class="img" src="img/slider/8.jpg" alt="">
 					<div class="block-4__content">
-						<p class="block-4__date"><i class="fa-regular fa-clock"></i><span>Jun 02, 2023</span></p>
+						<div class="block-4__date">
+							<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+							<span>Jun 02, 2023</span>
+						</div>
 						<p class="block-4__title">Spiderman: Across the Spiderverse</p>
 					</div>
+					
 				</div>
-			</div>
-			<div class="block-4__item">
-				<div class="block-4__thumbnaill">
+				<div class="block-4__item">
+					
 					<img class="img" src="img/slider/9.jpg" alt="">
 					<div class="block-4__content">
-						<p class="block-4__date"><i class="fa-regular fa-clock"></i><span>Jun 23, 2023</span></p>
+						<div class="block-4__date">
+							<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+							<span>Jun 23, 2023</span>
+						</div>
 						<p class="block-4__title">The Flash</p>
 					</div>
+					
 				</div>
-			</div>
-			<div class="block-4__item">
-				<div class="block-4__thumbnaill">
+				<div class="block-4__item">
+					
 					<img class="img" src="img/slider/4.jpg" alt="">
 					<div class="block-4__content">
-						<p class="block-4__date"><i class="fa-regular fa-clock"></i><span>Jul 28, 2023</span></p>
+						<div class="block-4__date">
+							<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+							<span>Jul 28, 2023</span>
+						</div>
 						<p class="block-4__title">The Marvels</p>
 					</div>
+					
 				</div>
-			</div>
-			<div class="block-4__item">
-				<div class="block-4__thumbnaill">
+				<div class="block-4__item">
+					
 					<img class="img" src="img/slider/5.jpg" alt="">
 					<div class="block-4__content">
-						<p class="block-4__date"><i class="fa-regular fa-clock"></i><span>Dic 23, 2023</span></p>
+						<div class="block-4__date">
+							<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+							<span>Dic 23, 2023</span>
+						</div>
 						<p class="block-4__title">AQUAMAN AND THE LOST KINGDOM</p>
 					</div>
+					
 				</div>
-			</div>
-			<div class="block-4__item">
-				<div class="block-4__thumbnaill">
+				<div class="block-4__item">
+					
 					<img class="img" src="img/slider/6.jpg" alt="">
 					<div class="block-4__content">
-						<p class="block-4__date"><i class="fa-regular fa-clock"></i><span>Feb 23, 2024</span></p>
+						<div class="block-4__date">
+							<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+							<span>Feb 23, 2024</span>
+						</div>
 						<p class="block-4__title">Madame Web</p>
 					</div>
+					
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
+	</main>
+
 
 	<aside class="sidebar">
 		<div class="sidebar__content">
 			<section class="section">
 				<div class="section__header">
 					<h4>Siguenos</h4>
-					<i class="fa-regular fa-thumbs-up"></i>
+					<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-like" /></svg>
 				</div>
 				<div class="social-bar">
 					<div class="social-bar__item social-bar__item--facebook">
-						<i class="fa-brands fa-facebook"></i>
+						<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-facebook" /></svg>
 						<div class="social-bar__count">
 							<p>0</p>
 							<p>Seguidores</p>
 						</div>
 					</div>
-					<div class="social-bar__item social-bar__item--twitter">
-						
-							<i class="fa-brands fa-twitter"></i>
-							<div class="social-bar__count">
-								<p>0</p>
-								<p>Seguidores</p>
-							</div>
+					<div class="social-bar__item social-bar__item--x">
+						<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-x-twitter" /></svg>
+						<div class="social-bar__count">
+							<p>0</p>
+							<p>Seguidores</p>
+						</div>
 					</div>
 					<div class="social-bar__item social-bar__item--instagram">
-						
-							<i class="fa-brands fa-instagram"></i>
-							<div class="social-bar__count">
-								<p>0</p>
-								<p>Seguidores</p>
-							</div>
+						<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-instagram" /></svg>
+						<div class="social-bar__count">
+							<p>0</p>
+							<p>Seguidores</p>
+						</div>
 					</div>
 					<div class="social-bar__item social-bar__item--youtube">
-							<i class="fa-brands fa-youtube"></i>
-							<div class="social-bar__count">
-								<p>0</p>
-								<p>Suscriptores</p>
-							</div>
+						<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-youtube" /></svg>
+						<div class="social-bar__count">
+							<p>0</p>
+							<p>Suscriptores</p>
+						</div>
 					</div>
 				</div>
 			</section>
 			<section class="section">
 				<div class="section__header">
 					<h4>Mas Popular</h4>
-					<i class="fa-solid fa-fire"></i>
+					<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-fire" /></svg>
 				</div>
 				<div class="trending">
 					<div class="trending__item" data-position="1">
@@ -354,7 +459,10 @@
 						</div>
 						<div class="trending__content">
 							<h2 class="trending__title"><a href="">El orden correcto para ver el anime de Naruto</a></h2>
-							<p class="trending__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
+							<div class="trending__date">
+								<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+								<span>Nov 21, 2022</span>
+							</div>
 						</div>
 					</div>
 					<div class="trending__item" data-position="2">
@@ -363,7 +471,10 @@
 						</div>
 						<div class="trending__content">
 							<h2 class="trending__title"><a href="">¿Cómo comenzar una colección Funko Pop?</a></h2>
-							<p class="trending__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
+							<div class="trending__date">
+								<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+								<span>Nov 21, 2022</span>
+							</div>
 						</div>
 					</div>
 					<div class="trending__item" data-position="3">
@@ -372,7 +483,10 @@
 						</div>
 						<div class="trending__content">
 							<h2 class="trending__title"><a href="">Alita: Battle Angel podría tener una secuela después de todo</a></h2>
-							<p class="trending__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
+							<div class="trending__date">
+								<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+								<span>Nov 21, 2022</span>
+							</div>
 						</div>
 					</div>
 					<div class="trending__item" data-position="4">
@@ -381,7 +495,10 @@
 						</div>
 						<div class="trending__content">
 							<h2 class="trending__title"><a href="">Las 15 frases mas inspiradoras del Capitán América</a></h2>
-							<p class="trending__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
+							<div class="trending__date">
+								<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+								<span>Nov 21, 2022</span>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -429,8 +546,8 @@
 	</section>
 	
 
-	<div class="container content">
-		<section class="main2">
+	<div class="container content content--second">
+		<div class="main main--second">
 			<!-- seccion de listas -->
 			<section class="section">
 				<div class="section__header">
@@ -441,7 +558,10 @@
 						<div class="block-6__thumbnaill">
 							<a class="" href="#"><img class="img" src="img/tops/list_a.jpg" alt=""></a>
 							<div class="block-6__content">
-								<p class="block-6__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
+								<div class="block-6__date">
+									<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+									<span>Nov 21, 2022</span>
+								</div>
 								<a href=""><h2 class="block-6__title">Las 15 frases mas inspiradoras del Capitán América</h2></a>
 							</div>
 						</div>
@@ -450,7 +570,10 @@
 						<div class="block-6__thumbnaill">
 							<a class="" href="#"><img class="img" src="img/tops/list_b.jpg" alt=""></a>
 							<div class="block-6__content">
-								<p class="block-6__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
+								<div class="block-6__date">
+									<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+									<span>Nov 21, 2022</span>
+								</div>
 								<a href=""><h2 class="block-6__title">Los 10 sacrificios más trágicos de la Liga de la Justicia</h2></a>
 							</div>
 						</div>
@@ -459,7 +582,10 @@
 						<div class="block-6__thumbnaill">
 							<a class="" href="#"><img class="img" src="img/tops/list_c.jpg" alt=""></a>
 							<div class="block-6__content">
-								<p class="block-6__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
+								<div class="block-6__date">
+									<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+									<span>Nov 21, 2022</span>
+								</div>
 								<a href=""><h2 class="block-6__title">Los 15 mejores villanos de She-Hulk</h2></a>
 							</div>
 						</div>
@@ -475,14 +601,20 @@
 					<article class="block-6__post">
 						<a href="#uuuuu"><img class="img" src="img/anime/2.jpg" alt=""></a>
 						<div class="block-6__content">
-							<p class="block-6__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
+							<div class="block-6__date">
+								<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+								<span>Nov 21, 2022</span>
+							</div>
 							<a href="#0000"><h2 class="block-6__title">El orden correcto para ver el anime de Naruto</h2></a>
 						</div>
 					</article>
 					<article class="block-6__post">
 						<a href="#uuuuu"><img class="img" src="img/anime/1.jpg" alt=""></a>
 						<div class="block-6__content">
-							<p class="block-6__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
+							<div class="block-6__date">
+								<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+								<span>Nov 21, 2022</span>
+							</div>
 							<a href="#0000">
 								<h2 class="block-6__title">El autor de Yu-Gi-Oh! publicará un manga de Spider-Man y Iron Man</h2>
 							</a>
@@ -491,7 +623,10 @@
 					<article class="block-6__post">
 						<a href="#uuuuu"><img class="img" src="img/anime/3.jpg" alt=""></a>
 						<div class="block-6__content">
-							<p class="block-6__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
+							<div class="block-6__date">
+								<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+								<span>Nov 21, 2022</span>
+							</div>
 							<a href="#0000">
 								<h2 class="block-6__title">Lo que viene luego de Dragon Ball Super</h2>
 							</a>
@@ -512,9 +647,13 @@
 						</div>
 						<div class="block-1__post-content">
 							<h3 class="block-1__post-title"><a href="#">¿Cómo leer comics digitales?</a></h3>
-							<div class="meta-tags">
-								<p class="meta-tags__autor"><i class="fa-regular fa-circle-user"></i><span>Cosme Fulanito</span></p>
-								<p class="meta-tags__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
+							<div class="meta-tags meta-tags--featured">
+								<p class="meta-tags__autor">
+									<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-user" /></svg>
+									<span>Cosme Fulanito</span></p>
+								<p class="meta-tags__date">
+									<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+									<span>Nov 21, 2022</span></p>
 							</div>
 							<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum in ab quia animi voluptatum iusto optio sequi, quo, laboriosam nam quas totam eum perferendis soluta officiis aspernatur? Esse eligendi placeat illo eum nisi, quo reprehenderit labore temporibus porro.
 							</p>
@@ -527,9 +666,13 @@
 						<div class="block-1__post-content">
 							<h3 class="block-1__post-title"><a href="#">¿Cómo comenzar una colección Funko Pop?</a></h3>
 							
-							<div class="meta-tags">
-								<p class="meta-tags__autor"><i class="fa-regular fa-circle-user"></i><span>Cosme Fulanito</span></p>
-								<p class="meta-tags__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
+							<div class="meta-tags meta-tags--featured">
+								<p class="meta-tags__autor">
+									<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-user" /></svg>
+									<span>Cosme Fulanito</span></p>
+								<p class="meta-tags__date">
+									<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+									<span>Nov 21, 2022</span></p>
 							</div>
 							
 							<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam eveniet dolores temporibus accusamus, odio autem natus possimus? Reiciendis quo dolorem repudiandae quos veritatis pariatur voluptatem vel porro consequatur aliquid sit quis.
@@ -543,8 +686,12 @@
 						<div class="block-1__post-content">
 							<h3 class="block-1__post-title"><a href="#">¿Cómo clasificar tus cómics y ordenar tu biblioteca?</a></h3>
 							<div class="meta-tags">
-								<p class="meta-tags__autor"><i class="fa-regular fa-circle-user"></i><span>Cosme Fulanito</span></p>
-								<p class="meta-tags__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
+								<p class="meta-tags__autor">
+									<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-user" /></svg>
+									<span>Cosme Fulanito</span></p>
+								<p class="meta-tags__date">
+									<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+									<span>Nov 21, 2022</span></p>
 							</div>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad tempora tenetur esse soluta veniam quae, possimus hic aut obcaecati eius ut modi sint minus voluptates, quis aperiam perspiciatis mollitia numquam suscipit consectetur iste?
 							</p>
@@ -555,13 +702,13 @@
 				<div class="block-1__button">Cargar mas</div>
 			</section>
 	
-		</section>
-		<aside class="sidebar2">
+		</div>
+		<aside class="sidebar sidebar--second">
 			<div class="sidebar__content">
 				<section class="section">
 					<div class="section__header">
 						<h4>Ultimos comentarios</h4>
-						<i class="fa-regular fa-comment"></i>
+						<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-coment" /></svg>
 					</div>
 					<div class="comments">
 						<div class="comments__item">
@@ -571,7 +718,9 @@
 							<div class="comments__content">
 								<p class="comments__message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exe esse animi eius?</p>
 								<div class="meta-tags meta-tags--comments">
-									<p class="meta-tags__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
+									<p class="meta-tags__date">
+										<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+										<span>Nov 21, 2022</span></p>
 								</div>
 							</div>
 						</div>
@@ -582,7 +731,9 @@
 							<div class="comments__content">
 								<p class="comments__message">Lorem ipsum dolor sit amet elit.  Esse animi, quod iure facilis?</p>
 								<div class="meta-tags meta-tags--comments">
-									<p class="meta-tags__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
+									<p class="meta-tags__date">
+										<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+										<span>Nov 21, 2022</span></p>
 								</div>
 							</div>
 						</div>
@@ -593,7 +744,9 @@
 							<div class="comments__content">
 								<p class="comments__message">Lorem ipsum dolor sit amet consectetur adipisicing elit, quod iure facilis?</p>
 								<div class="meta-tags meta-tags--comments">
-									<p class="meta-tags__date"><i class="fa-regular fa-clock"></i><span>Nov 21, 2022</span></p>
+									<p class="meta-tags__date">
+										<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+										<span>Nov 21, 2022</span></p>
 								</div>
 							</div>
 						</div>
@@ -602,7 +755,7 @@
 			<section class="section">
 				<div class="section__header">
 					<h4>Instagram</h4>
-					<i class="fa-brands fa-instagram"></i>
+					<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-instagram" /></svg>
 				</div>
 				<div class="block-insta">
 					<div class="block-insta__photo">
@@ -631,7 +784,7 @@
 	</div>
 	<div class="button-top" title="Ir hacia arriba">
 		<div class="button-top__container">
-			<i class="fa-solid fa-chevron-up"></i>
+			<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-arrow-up" /></svg>
 		</div>
 	</div>
 
@@ -644,10 +797,10 @@
 			<section class="social-footer">
 				<h4 class="social__title">Redes Sociales</h4>
 				<div class="social-footer__container">
-					<div class="social-footer__item"><i class="fa-brands fa-square-facebook"></i><p>Sigue nuestra Fanpage</p></div>
-					<div class="social-footer__item"><i class="fa-brands fa-instagram"></i><p>Siguenos en Instagram</p></div>
-					<div class="social-footer__item"><i class="fa-brands fa-youtube"></i><p>Suscribete a nuestro canal</p></div>
-					<div class="social-footer__item"><i class="fa-brands fa-twitter"></i><p>Siguenos en Twitter</p></div>
+					<div class="social-footer__item"><svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-square-facebook" /></svg><p>Sigue nuestra Fanpage</p></div>
+					<div class="social-footer__item"><svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-instagram" /></svg><p>Siguenos en Instagram</p></div>
+					<div class="social-footer__item"><svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-youtube" /></svg><p>Suscribete a nuestro canal</p></div>
+					<div class="social-footer__item"><svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-x-twitter" /></svg><p>Siguenos en Twitter</p></div>
 					
 				</div>
 			</section>
