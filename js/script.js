@@ -45,6 +45,10 @@ document.addEventListener('scroll', () => {
     posicionarNavBar();
 })
 
+document.addEventListener("click", (e) =>{
+    console.log(e.target)
+});
+
 //::::::::::::::::::  Slider ::::::::::::::::::::::::
 
 let contador=0,position=0, positionBg=0;
