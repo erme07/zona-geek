@@ -58,47 +58,53 @@ document.addEventListener("click", (e) =>{
     else if(e.target.id === "filter__button"){
         e.target.parentElement.classList.toggle("show-options");
     }
-    else{
-        e.target.parentElement.classList.toggle("show-options");
+    else if (e.target.id === "prev" || e.target.matches('.prev *')) {
+        prevSlide();
+    }
+    else if (e.target.id === "next" || e.target.matches('.next *')) {
+        nextSlide();
+    }
+    else if (document.querySelector(".show-options")){
+        document.querySelector(".show-options").classList.remove("show-options");
     }
 });
 
 //::::::::::::::::::  Slider ::::::::::::::::::::::::
 
 let contador=0,position=0, positionBg=0;
-for(i=5;i<slider.childElementCount;i++){
-    slider.children[i].classList.toggle("hidden");
+
+const obtenerAnchoSlide = () => {
+    let slider_data = getComputedStyle(slider);
+    let ancho = document.querySelector(".block-4__item").offsetWidth;
+    ancho = parseInt(slider_data.getPropertyValue('gap'), 10) + ancho;
+    return ancho;
 }
 
-next.addEventListener('click', ()=>{
-    if(contador==0) return;
+const nextSlide = () => {
+    if (contador == 0) return;
     prev.classList.remove("blocked");
     contador--;
-    position += 143;
+    position += obtenerAnchoSlide();
     positionBg += 142;
-    slider.children[contador].classList.toggle("hidden");
-    slider.children[5+contador].classList.toggle("hidden");
-    slider.style.setProperty('--positionBackground', positionBg+'px')
-    Array.from(slider.children).forEach(e => {
-        e.style.setProperty('--positionSlide',position+'px')
-    });
-    if(contador==0) next.classList.add("blocked");
-})
-prev.addEventListener('click', ()=>{
-    if(contador>=slider.childElementCount-5) return;
+    slider.style.setProperty('--positionBackground', positionBg + 'px')
+    slider.style.setProperty('--positionSlide', position + 'px')
+    if (contador == 0) next.classList.add("blocked");
+}
+const prevSlide = () => {
+    if (contador >= slider.childElementCount - 5) return;
     next.classList.remove("blocked");
-    slider.children[contador].classList.toggle("hidden");
-    slider.children[5+contador].classList.toggle("hidden");
-    position -= 143;
+    position -= obtenerAnchoSlide();
     positionBg -= 142;
-    slider.style.setProperty('--positionBackground', positionBg+'px')
-    //document.querySelectorAll(".block-4__item").style.setProperty('--positionSlide',position+'px')
-    Array.from(slider.children).forEach(e => {
-        e.style.setProperty('--positionSlide',position+'px')
-    });
+    slider.style.setProperty('--positionBackground', positionBg + 'px')
+    slider.style.setProperty('--positionSlide', position + 'px')
     contador++;
-    if(contador>=slider.childElementCount-5) prev.classList.add("blocked");
-})
+    if (contador >= slider.childElementCount - 5) prev.classList.add("blocked");
+}
+
+
+
+
+
 
 let radio = document.querySelector('.score__progress').r.baseVal.value;
 let cincoprogreso = 9.425;
