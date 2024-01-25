@@ -233,12 +233,20 @@
 			<div class="section__header">
 				<h4>Reseñas</h4>
 				<div class="section__filter">
-					<span class="selected">cine</span>
-					<span>television</span>
-					<span>comics</span>
-					<span>videojuegos</span>
-					<span>Anime</span>
-					<span>Manga</span>
+					<span class="filter__button" id="filter__button">
+						Categorias
+						<svg class="icon">
+							<use href="./img/icons/icons.svg#icon-arrow-down" />
+						</svg></span>
+					</span>
+					<div class="filter__options">
+						<span class="selected">cine</span>
+						<span>television</span>
+						<span>comics</span>
+						<span>videojuegos</span>
+						<span>Anime</span>
+						<span>Manga</span>
+					</div>
 				</div>
 			</div>
 			<div class="block-6" id="prueba">
@@ -303,8 +311,8 @@
 			<div class="section__header">
 				<h4>Cartelera</h4>
 				<div class="block-4__buttons">
-					<svg class="icon next blocked" ><use href="./img/icons/icons.svg#icon-arrow-left" /></svg>
-					<svg class="icon prev" ><use href="./img/icons/icons.svg#icon-arrow-right" /></svg>
+					<svg class="icon next blocked" id="next"><use href="./img/icons/icons.svg#icon-arrow-left" /></svg>
+					<svg class="icon prev" id="prev"><use href="./img/icons/icons.svg#icon-arrow-right" /></svg>
 				</div>
 			</div>
 			<div id="slider" class="block-4">
