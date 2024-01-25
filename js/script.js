@@ -52,7 +52,15 @@ document.addEventListener('scroll', () => {
 })
 
 document.addEventListener("click", (e) =>{
-    console.log(e.target)
+    if(e.target.id === "menu_checkbox"){
+        navBar.classList.toggle("nav__menu--show");
+    }
+    else if(e.target.id === "filter__button"){
+        e.target.parentElement.classList.toggle("show-options");
+    }
+    else{
+        e.target.parentElement.classList.toggle("show-options");
+    }
 });
 
 //::::::::::::::::::  Slider ::::::::::::::::::::::::
