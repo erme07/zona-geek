@@ -105,7 +105,9 @@ html {scroll-behavior: smooth; font-family: roboto;}
     font-size: 11px;
     font-weight: bold;
     display: flex;
+    align-items: center;
     gap: 5px;
+    position: relative;
 }
 .section__filter span{
     cursor: pointer;
@@ -114,6 +116,10 @@ html {scroll-behavior: smooth; font-family: roboto;}
     transition: all .3s;
 }
 .section__filter span:hover {background-color: #000000; color:white;}
+.filter__button{
+    border: 1px solid currentColor;
+    display: none;
+}
 .selected {background-color: #000000; color: white;}
 
 .section--dark .section__filter span:hover {background-color: white; color:black;}
@@ -228,7 +234,7 @@ html {scroll-behavior: smooth; font-family: roboto;}
 
 
 #menu_checkbox {display: none;}
-.nav__burguer {width: 25px;height: 25px;cursor: pointer;}
+.nav__burguer {width: 25px;height: 25px;cursor: pointer; display: none;}
 .nav__burguer div {
     position: relative;
     top: 0;
@@ -945,26 +951,67 @@ html {scroll-behavior: smooth; font-family: roboto;}
     .header{
         display: none;
     }
+    .section__header h4{
+        font-size: clamp(18px, 3.2vw, 22px);
+    }
+    .filter__button{
+        display: block;
+    }
+    .filter__options{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: white;
+    }
+    .show-options .filter__options{
+        display: flex;
+    }
     .nav__logo{
         visibility: visible;
         opacity: 1;
         justify-self: start;
     }
     .nav__menu{
-        display: none;
-    }
-    /* .nav__menu{
         position: absolute;
-        top: 300px;
-        left: 500px;
-        background-color: #333333;
-    } */
+        z-index: -1;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        /* right: -100vw; */
+        transform: translateX(-100%);
+        background-color: #222222;
+        transition: transform .3s;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding-top: 50px;
+    }
+    .nav__menu--show .nav__menu{
+        transform: translateX(0);
+    }
+    .nav__menu li{
+        width: 80%;
+        height: 40px;
+        text-align: center;
+    }
+    .nav__menu a{
+        justify-content: center;
+        font-size: clamp(14px, 3.3vw, 18px);
+    }
+    .nav__menu li:last-child{
+        order: -1;
+    }
     .nav .container{
         display: grid;
         grid-template-columns: 1fr 1fr 25px;
         justify-items: end;
         gap: 30px;
     }
+    .nav__burguer {display: block;}
+
     .featured{
         height: auto;
         max-height: unset;
@@ -1009,6 +1056,20 @@ html {scroll-behavior: smooth; font-family: roboto;}
     .sidebar--second .sidebar__content{
         grid-template-columns: 1fr 1fr;
     }
+
+    .block-1{
+        gap: 35px;
+    }
+    .block-1__post{
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .block-1__thumbnaill{
+        height: 50vw;
+        max-height: unset;
+    }
+
     .block-5 {grid-template-rows: repeat(3, auto);}
     .block-5__post:first-child {grid-area: 1/1/2/3; margin-bottom: 10px;}
     .block-5__post:first-child .block-5__thumbnail {height: 50vw;}
@@ -1034,7 +1095,7 @@ html {scroll-behavior: smooth; font-family: roboto;}
     }
     .block-6__post {height: 50vw; max-height: unset;}
     .block-6__title{
-        font-size: clamp(28px, 4.5vw, 34px);
+        font-size: clamp(21px, 4.5vw, 34px);
     }
     .block-6__date{
         font-size: clamp(11px, 2vw, 15px);
@@ -1068,7 +1129,7 @@ html {scroll-behavior: smooth; font-family: roboto;}
         padding: 3px;
         gap: 3px;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(3,50vw);
+        grid-template-rows: repeat(3,55vw);
         grid-template-areas:"item_a"
                             "item_b"
                             "item_c";
@@ -1087,18 +1148,13 @@ html {scroll-behavior: smooth; font-family: roboto;}
         grid-template-rows: repeat(3,150px);
     }
 
-    .block-1__post{
-        height: auto;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-    }
 
     .section--dark{
         margin: 0px -10px 35px -10px;
         padding: 20px 10px 30px
     }
     .block-3__item a{
-        font-size: 13px;
+        font-size: clamp(12px, 3.4vw, 17px);
     }
     .block-3__item--comics, .block-3__item--movies, .block-3__item--tv, .block-3__item--videogames, .block-3__item--anime, .block-3__item--manga{
         clip-path: none;
@@ -1150,7 +1206,7 @@ html {scroll-behavior: smooth; font-family: roboto;}
     .subfooter{
         font-size: 11px;
     }
-    .section__header{
+    .section__filter{
         display: none;
     }
 
