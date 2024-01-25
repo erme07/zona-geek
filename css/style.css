@@ -522,20 +522,21 @@ html {scroll-behavior: smooth; font-family: roboto;}
 
 .block-4{
     --positionBackground: 0;
+    --positionSlide: 0;
     padding: 25px 0px;
     align-self: center;
-    width: 710px;
+    width: 720px;
     background: url(../img/film.png) var(--positionBackground) top / 28.4px 100% repeat no-repeat;
     transition: background 0.23s ease-in-out;
     display: flex;
     gap: 5px;
     overflow-x: hidden;
+    user-select: none;
 }
 .block-4__item{
-    --positionSlide:0px;
     transform: translate(var(--positionSlide));
-    width: 138px;
-    height: 220px;
+    width: 140px;
+    height: 210px;
     flex: 0 0 auto;
     display: flex;
     flex-direction: column;
@@ -964,6 +965,7 @@ html {scroll-behavior: smooth; font-family: roboto;}
         top: 100%;
         right: 0;
         background-color: white;
+        z-index: 3;
     }
     .show-options .filter__options{
         display: flex;
@@ -1082,7 +1084,11 @@ html {scroll-behavior: smooth; font-family: roboto;}
     }
 
     .block-4{
-        width: 424px;
+        width: 520px;
+    }
+    .block-4__item{
+        width: 170px;
+        height: 255px;
     }
     
     .block-3{
@@ -1182,7 +1188,11 @@ html {scroll-behavior: smooth; font-family: roboto;}
         clip-path: polygon(0 0, 100% 0, 100% 100%, 5% 100%);
     }
     .block-4{
-        width: 138px;
+        width: 260px;
+    }
+    .block-4__item{
+        width: 260px;
+        height: 390px;
     }
     .sidebar__content, .sidebar--second .sidebar__content{
         grid-template-columns: 1fr;
@@ -1206,10 +1216,5 @@ html {scroll-behavior: smooth; font-family: roboto;}
     .subfooter{
         font-size: 11px;
     }
-    .section__filter{
-        display: none;
-    }
-
-    
 }
 
