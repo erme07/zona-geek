@@ -20,22 +20,28 @@ const showButton = () => {
 buttonTop.addEventListener('click', () =>window.scrollTo(0, 0))
 
 const posicionarNavBar = () => {
-    if (posicionY > scrollY && scrollY > navbarOffset + navBarHeight)
+    if(posicionY > scrollY){
         //subiendo
-        navBar.classList.add('nav--show');
-    else if (posicionY > scrollY && scrollY < navbarOffset) {
-        //subiendo y se pasa del navbar
-        navBar.classList.remove('nav--show');
-        navLogo.classList.remove('nav__logo--show');
-    }
-    else if (posicionY < scrollY && scrollY > navbarOffset + navBarHeight) {
-        //bajando y se pasa del navbar
-        navLogo.classList.add('nav__logo--show');
-        navBar.classList.remove('nav--show');
-    }
-    else if(posicionY < scrollY)
+        if (scrollY > navbarOffset + navBarHeight)
+            navBar.classList.add('nav--show');
+        else if (scrollY < navbarOffset) {
+            //subiendo y se pasa del navbar
+            navBar.classList.remove('nav--show');
+            navLogo.classList.remove('nav__logo--show');
+        }
+        else if(scrollY === 0){
+            navBar.classList.remove('nav--show');
+        }
+    }else{
         //bajando
-        navBar.classList.remove('nav--show');
+        if (scrollY > navbarOffset + navBarHeight) {
+            //bajando y se pasa del navbar
+            navLogo.classList.add('nav__logo--show');
+            navBar.classList.remove('nav--show');
+        }
+        else
+            navBar.classList.remove('nav--show');
+    }
     posicionY = scrollY;
 }
 
