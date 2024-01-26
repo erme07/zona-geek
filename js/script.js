@@ -56,6 +56,8 @@ document.addEventListener("click", (e) =>{
         navBar.classList.toggle("nav__menu--show");
     }
     else if(e.target.id === "filter__button"){
+        if (document.querySelector(".show-options"))
+            document.querySelector(".show-options").classList.remove("show-options");
         e.target.parentElement.classList.toggle("show-options");
     }
     else if (e.target.id === "prev" || e.target.matches('.prev *')) {
@@ -73,32 +75,55 @@ document.addEventListener("click", (e) =>{
 
 let contador=0,position=0, positionBg=0;
 
-const obtenerAnchoSlide = () => {
-    let slider_data = getComputedStyle(slider);
+const obtenerAnchoSlide = (data) => {
     let ancho = document.querySelector(".block-4__item").offsetWidth;
-    ancho = parseInt(slider_data.getPropertyValue('gap'), 10) + ancho;
+    ancho = parseInt(data.getPropertyValue('gap'), 10) + ancho;
     return ancho;
 }
 
+const numeroSlides = (data) => {
+    if(data.getPropertyValue('width') === "720px")
+        return 5;
+    if(data.getPropertyValue('width') === "520px")
+        return 3;
+    if(data.getPropertyValue('width') === "260px")
+        return 1;
+}
+
+const anchoBackground = (data) => {
+    if(data.getPropertyValue('width') === "720px")
+        return 144;
+    if(data.getPropertyValue('width') === "520px")
+        return 173.3333333;
+    if(data.getPropertyValue('width') === "260px")
+        return 260;
+}
+
 const nextSlide = () => {
-    if (contador == 0) return;
+    if (contador == 0) 
+        return;
+    let slider_data = getComputedStyle(slider);
     prev.classList.remove("blocked");
     contador--;
-    position += obtenerAnchoSlide();
-    positionBg += 142;
+    position += obtenerAnchoSlide(slider_data);
+    positionBg += anchoBackground(slider_data);
     slider.style.setProperty('--positionBackground', positionBg + 'px')
     slider.style.setProperty('--positionSlide', position + 'px')
-    if (contador == 0) next.classList.add("blocked");
+    if (contador == 0) 
+        next.classList.add("blocked");
 }
 const prevSlide = () => {
-    if (contador >= slider.childElementCount - 5) return;
+    let slider_data = getComputedStyle(slider);
+    if (contador >= slider.childElementCount - numeroSlides(slider_data)) 
+        return;
     next.classList.remove("blocked");
-    position -= obtenerAnchoSlide();
-    positionBg -= 142;
+    position -= obtenerAnchoSlide(slider_data);
+    positionBg -= anchoBackground(slider_data);
     slider.style.setProperty('--positionBackground', positionBg + 'px')
     slider.style.setProperty('--positionSlide', position + 'px')
     contador++;
-    if (contador >= slider.childElementCount - 5) prev.classList.add("blocked");
+    if (contador >= slider.childElementCount - numeroSlides(slider_data)) 
+        prev.classList.add("blocked");
 }
 
 
@@ -165,7 +190,7 @@ let observer = new IntersectionObserver((entries, observer) => {
         // }
     });
 }, {
-    threshold: 0.5 // Detecta cuando el 50% del elemento es visible
+    threshold: 0.2 // Detecta cuando el 20% del elemento es visible
 });
 
 // Inicia la observación del elemento
