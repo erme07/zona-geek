@@ -72,11 +72,27 @@ document.addEventListener("click", (e) =>{
     }
 });
 
-document.addEventListener("change", (e) =>{
-    if(e.target.id === "dark-switch"){
-        document.body.setAttribute("data-theme", e.target.checked ? "dark" : "light");
+document.addEventListener("input", (e) =>{
+    if (e.target.id === "dark-switch") {
+        let mode = e.target.checked ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", mode);
+        localStorage.setItem('mode', mode);
     }
 })
+
+// if (localStorage.getItem('mode')) {
+//     let mode = localStorage.getItem('mode');
+//     if (mode === "dark") {
+//         dark_switch.checked = true
+//         // document.documentElement.setAttribute("data-theme", mode)
+//     }
+//     else {
+//         dark_switch.checked = false;
+//         // document.documentElement.setAttribute("data-theme", mode)
+//     }
+        
+// }
+
 //::::::::::::::::::  Slider ::::::::::::::::::::::::
 
 let contador=0,position=0, positionBg=0;
