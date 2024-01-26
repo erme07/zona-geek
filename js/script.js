@@ -4,6 +4,7 @@ const slider= document.getElementById("slider");
 const next = document.querySelector(".next");
 const prev = document.querySelector(".prev");
 const buttonTop = document.querySelector('.button-top');
+const dark_switch= document.getElementById("dark-switch");
 
 
 let posicionY = 0;
@@ -66,11 +67,16 @@ document.addEventListener("click", (e) =>{
     else if (e.target.id === "next" || e.target.matches('.next *')) {
         nextSlide();
     }
-    else if (document.querySelector(".show-options")){
+    else if (document.querySelector(".show-options") && !e.target.matches(".filter__options *")){
         document.querySelector(".show-options").classList.remove("show-options");
     }
 });
 
+document.addEventListener("change", (e) =>{
+    if(e.target.id === "dark-switch"){
+        document.body.setAttribute("data-theme", e.target.checked ? "dark" : "light");
+    }
+})
 //::::::::::::::::::  Slider ::::::::::::::::::::::::
 
 let contador=0,position=0, positionBg=0;
