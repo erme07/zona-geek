@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<title>ZonaGeek</title>
 </head>
-<body>
+<body data-theme="light">
 	<header class="header">
 		<div class="container header__brand">
 			<a href="#"><img src="img/zonageek-logo.png"></a>
@@ -52,7 +52,7 @@
 			</ul>
 			<div class="nav__switch">
 				<label class="switch">
-					<input class="switch__input" type="checkbox" role="switch" name="dark" />
+					<input class="switch__input" type="checkbox"  id="dark-switch" role="switch" name="dark" />
 					<svg class="switch__icon" width="24px" height="24px" aria-hidden="true">
 						<use href="./img/icons/icons.svg#icon-light" />
 					</svg>
@@ -821,8 +821,8 @@
 			<section class="newsletter">
 				<h4 class="newsletter__title">Newsletter</h4>
 				<p class="newsletter__text">Lorem ipsum dolor sit amet consectetur.</p>
-				<input class="newsletter__email" type="email" name="" id="" placeholder="Your email adress here">
-				<input class="newsletter__button" type="submit" value="Suscribe">
+				<input class="newsletter__email" type="email" name="" id="" placeholder="Su dirección de email">
+				<input class="newsletter__button" type="submit" value="Suscribirse">
 			</section>
 		</div>
 		<section class="subfooter">
