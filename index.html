@@ -4,18 +4,28 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="icon" href="img/favicon.png">
+	<link rel="icon" href="./img/icons/favicon.png">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Khand:wght@400;700&family=Noto+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 	
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<script>
+		let modo = localStorage.getItem('mode');
+		if (modo) 
+			document.documentElement.setAttribute("data-theme", modo);
+		document.addEventListener('DOMContentLoaded', () => {
+			let dark_switch = document.getElementById('dark-switch');
+			dark_switch.checked = (modo === "dark" || window.matchMedia('(prefers-color-scheme: dark)' && modo !="dark").matches) ? true : false;
+		});
+	</script>
+	<script defer src="js/script.js"></script>
 	<title>ZonaGeek</title>
 </head>
-<body data-theme="light">
+<body>
 	<header class="header">
-		<div class="container header__brand">
-			<a href="#"><img src="img/zonageek-logo.png"></a>
+		<div class="container">
+			<a class="header__brand" href="#"><img src="img/zonageek-logo.png"></a>
 			<div class="header__social">
 				<a href="">
 					<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-facebook" /></svg>
@@ -82,7 +92,14 @@
     
     <section class="featured">
 		<article class="featured__item item_a">
-			<a class="featured__image" href="#"><img class="img" src="img/featured/1.jpg" alt=""></a>
+			<a class="featured__image" href="#">
+				<picture>
+					<source media="(min-width: 769px)" srcset="./img/featured/1_700.webp">
+					<source media="(min-width: 577px)" srcset="./img/featured/1_920.webp">
+					<source media="(min-width: 400px)" srcset="./img/featured/1_700.webp">
+					<img class="img" src="./img/featured/1_450.webp" alt="">
+				</picture>
+			</a>
 			<div class="featured__title">
 				<div class="meta-tags meta-tags--featured">
 					<p class="meta-tags__autor">
@@ -98,7 +115,14 @@
 			<a href="#categoria-television" class="featured__category">television</a>
 		</article>
 		<article class="featured__item item_b">
-			<a class="featured__image" href="#"><img class="img" src="img/featured/2.jpg" alt=""></a>
+			<a class="featured__image" href="#">
+				<picture>
+					<source media="(min-width: 1125px)" srcset="./img/featured/2_700.webp">
+					<source media="(min-width: 577px)" srcset="./img/featured/2_450.webp">
+					<source media="(min-width: 400px)" srcset="./img/featured/2_700.webp">
+					<img class="img" src="./img/featured/2_450.webp" alt="">
+				</picture>
+			</a>
 			<div class="featured__title">
 				<div class="meta-tags meta-tags--featured">
 					<p class="meta-tags__autor">
@@ -114,7 +138,14 @@
 		</article>
 		<article class="featured__item item_c">
 			
-			<a class="featured__image" href="#"><img class="img" src="img/featured/3.jpg" alt=""></a>
+			<a class="featured__image" href="#">
+				<picture>
+					<source media="(min-width: 1125px)" srcset="./img/featured/3_700.webp">
+					<source media="(min-width: 577px)" srcset="./img/featured/3_450.webp">
+					<source media="(min-width: 400px)" srcset="./img/featured/3_700.webp">
+					<img class="img" src="./img/featured/3_450.webp" alt="">
+				</picture>
+			</a>
 			<div class="featured__title">
 				<div class="meta-tags meta-tags--featured">
 					<p class="meta-tags__autor">
@@ -733,7 +764,7 @@
 					<div class="comments">
 						<div class="comments__item">
 							<div class="comments__thumbnaill">
-								<img class="img" src="img/avatar/user_a.jpg" alt="">
+								<img class="img" src="img/avatar/user_a.webp" alt="">
 							</div>
 							<div class="comments__content">
 								<p class="comments__message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exe esse animi eius?</p>
@@ -746,7 +777,7 @@
 						</div>
 						<div class="comments__item">
 							<div class="comments__thumbnaill">
-								<img class="img" src="img/avatar/user_b.jpg" alt="">
+								<img class="img" src="img/avatar/user_b.webp" alt="">
 							</div>
 							<div class="comments__content">
 								<p class="comments__message">Lorem ipsum dolor sit amet elit.  Esse animi, quod iure facilis?</p>
@@ -759,7 +790,7 @@
 						</div>
 						<div class="comments__item">
 							<div class="comments__thumbnaill">
-								<img class="img" src="img/avatar/user_c.jpg" alt="">
+								<img class="img" src="img/avatar/user_c.webp" alt="">
 							</div>
 							<div class="comments__content">
 								<p class="comments__message">Lorem ipsum dolor sit amet consectetur adipisicing elit, quod iure facilis?</p>
@@ -779,22 +810,22 @@
 				</div>
 				<div class="block-insta">
 					<div class="block-insta__photo">
-						<img class="img" src="img/instagram/insta1.jpg" alt="">
+						<img class="img" src="img/instagram/insta1.webp" alt="imagen de instagram capitan america zombie">
 					</div>
 					<div class="block-insta__photo">
-						<img class="img" src="img/instagram/insta2.jpg" alt="">
+						<img class="img" src="img/instagram/insta2.webp" alt="imagen de instagram mascara capitan america">
 					</div>
 					<div class="block-insta__photo">
-						<img class="img" src="img/instagram/insta3.jpg" alt="">
+						<img class="img" src="img/instagram/insta3.webp" alt="imagen de instagram cosplay de nightwing">
 					</div>
 					<div class="block-insta__photo">
-						<img class="img" src="img/instagram/insta4.jpg" alt="">
+						<img class="img" src="img/instagram/insta4.webp" alt="imagen de instagram sacrificio de ironman">
 					</div>
 					<div class="block-insta__photo">
-						<img class="img" src="img/instagram/insta5.jpg" alt="">
+						<img class="img" src="img/instagram/insta5.webp" alt="imagen de instagram fanart de spiderman">
 					</div>
 					<div class="block-insta__photo">
-						<img class="img" src="img/instagram/insta6.jpg" alt="">
+						<img class="img" src="img/instagram/insta6.webp" alt="imagen de instagram fanart de batman y superman">
 					</div>
 				</div>
 			</section>
@@ -839,7 +870,7 @@
 		</section>
 </footer>
 
-<script src="js/script.js"></script>
+
 
 </body>
 </html>
