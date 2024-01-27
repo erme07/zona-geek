@@ -3,8 +3,8 @@ const navLogo= document.querySelector(".nav__logo");
 const slider= document.getElementById("slider");
 const next = document.querySelector(".next");
 const prev = document.querySelector(".prev");
-const buttonTop = document.querySelector('.button-top');
 const dark_switch= document.getElementById("dark-switch");
+const buttonTop = document.querySelector(".button-top");
 
 
 let posicionY = 0;
@@ -12,13 +12,11 @@ let navbarOffset = document.querySelector('.header').offsetHeight;
 let navBarHeight = navBar.offsetHeight;
 
 const showButton = () => {
-    if (window.scrollY > 400) {
-        buttonTop.classList.add("button-top--show")
-    } else {
-        buttonTop.classList.remove("button-top--show")
-    }
+    scrollY > 400 
+    ? buttonTop.classList.add("button-top--show") 
+    : buttonTop.classList.remove("button-top--show");
 }
-buttonTop.addEventListener('click', () =>window.scrollTo(0, 0))
+
 
 const posicionarNavBar = () => {
     if(posicionY > scrollY){
@@ -70,9 +68,12 @@ document.addEventListener("click", (e) =>{
     else if (document.querySelector(".show-options") && !e.target.matches(".filter__options *")){
         document.querySelector(".show-options").classList.remove("show-options");
     }
+    else if(e.target.matches(".button-top") || e.target.matches(".button-top *")){
+        window.scrollTo(0, 0);
+    }
 });
 
-document.addEventListener("change", (e) =>{
+document.addEventListener("input", (e) =>{
     if(e.target.id === "dark-switch"){
         document.body.setAttribute("data-theme", e.target.checked ? "dark" : "light");
     }
@@ -143,7 +144,6 @@ let circunferencia = 2 * Math.PI * radio;
 let progreso = 95;
 
 let strokeDashoffset = circunferencia * (1 - progreso / 100);
-console.log(strokeDashoffset)
 
 const circulos = Array.from(document.getElementsByClassName("score"));
 
@@ -182,7 +182,8 @@ const incrementarValor = (circulos, tasa, tiempoTotal, valorMaximo) => {
 }
 
 
-let elemento = document.getElementById('prueba');
+let resenias = document.getElementById('resenias');
+
 let observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -200,4 +201,4 @@ let observer = new IntersectionObserver((entries, observer) => {
 });
 
 // Inicia la observación del elemento
-observer.observe(elemento);
+observer.observe(resenias);
