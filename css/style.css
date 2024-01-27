@@ -7,11 +7,11 @@
 :root{
     --navBarHeight: 50px;
     --header-bg:#182b33;
-    --igColor:#ce4b95;
-    --fbColor:#558dfc;
+    --igColor:#ba3d84;
+    --fbColor:#2363e0;
     --xColor: #000000;
     --twColor:#50c7fa;
-    --ytColor:#f14334;
+    --ytColor:#dc392b;
 
     --title-color:#333333;
     --title-hover:#fdebb5;
@@ -280,7 +280,7 @@ body{
 .nav__menu {list-style: none;display:flex;}
 .nav__menu li:hover {background-color: #0e0e0e;}
 
-.nav__menu a{
+.nav__menu a, .nav__menu span{
     height: 100%;
     font-size: 14px;
     text-decoration: none;
@@ -291,7 +291,8 @@ body{
     align-items: center;
     padding: 0px 15px;
 }
-.nav__menu i {cursor: pointer;}
+.nav__menu span{ cursor: pointer;}
+
 
 
 #menu_checkbox {display: none;}
@@ -930,7 +931,9 @@ body{
     z-index: -1;
 }
 .comments__message {font-size: 12px; color:var(--text-color); transition: color .2s; }
+[data-theme="dark"] .comments__message {color: #f4f4f4;}
 .meta-tags--comments {gap: 3px; font-size: 11px; justify-content: flex-end;}
+[data-theme="dark"] .meta-tags--comments {color: #f0f0f0;}
 
 /*::::::::::::::::::::::::::::::::::::::*/
 
