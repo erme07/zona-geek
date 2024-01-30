@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Zona Geek es el punto de encuentro para todo el amante de la cultura geek. Aqui encontraras noticias, reseñas y demas sobre la cultura popular">
+	<link rel="icon" href="./img/icons/favicon.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Khand:wght@400;500;600;700&family=Noto+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/review.css">
+	<script>
+		let modo = localStorage.getItem('mode');
+		if (modo) 
+			document.documentElement.setAttribute("data-theme", modo);
+		document.addEventListener('DOMContentLoaded', () => {
+			let dark_switch = document.getElementById('dark-switch');
+			dark_switch.checked = (modo === "dark" || window.matchMedia('(prefers-color-scheme: dark)' && modo !="dark").matches) ? true : false;
+		});
+	</script>
+	<script defer src="js/script.js"></script>
+    <title>Reseña - Doctor Strange in the multiverse of madness</title>
+</head>
+<body>
+    <header class="header">
+		<div class="container">
+			<a class="header__brand" href="#" title="Ir al inicio">
+				<img src="img/zonageek-logo.webp" alt="logo de zona geek" title="Zona Geek">
+			</a>
+			<div class="header__social">
+				<a href="" title="enlave hacia facebook">
+					<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-facebook" /></svg>
+				</a>
+				<a href="" title="enlace hacia x">
+					<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-x-twitter" /></svg>
+				</a>
+				<a href="" title="enlace hacia instagram">
+					<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-instagram" /></svg>
+				</a>
+				<a href="" title="enlace hacia youtube">
+					<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-youtube" /></svg>
+				</a>
+			</div>
+		</div>
+	</header>
+	<nav class="nav">
+		<div class="container">
+			<div class="nav__logo">
+				<img src="img/zonageek-logo-min.webp" alt="logo de zona geek" title="Zona Geek">
+			</div>
+			<ul class="nav__menu">
+				<li><a href="./index.html" title="ir a inicio">Inicio</a></li>
+				<li><a href="#" title="ir a noticas">Noticias</a></li>
+				<li><a href="#" title="ir a reseñas">Reseñas</a></li>
+				<li><a href="#" title="ir a listas">Listas</a></li>
+				<li><a href="#" title="ir a articulos">Articulos</a></li>
+				<li><a href="#" title="ir a contacto">Contacto</a></li>
+				<li>
+					<span>
+						<svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-search" /></svg>
+					</span>
+				</li>
+			</ul>
+			<div class="nav__switch">
+				<label class="switch">
+					<input class="switch__input" type="checkbox"  id="dark-switch" role="switch" name="dark" />
+					<svg class="switch__icon" width="24px" height="24px" aria-hidden="true">
+						<use href="./img/icons/icons.svg#icon-light" />
+					</svg>
+					<svg class="switch__icon" width="24px" height="24px" aria-hidden="true">
+						<use href="./img/icons/icons.svg#icon-dark" />
+					</svg>
+					<span class="switch__inner"></span>
+					<span class="switch__inner-icons">
+						<svg class="switch__icon" width="24px" height="24px" aria-hidden="true">
+							<use href="./img/icons/icons.svg#icon-light" />
+						</svg>
+						<svg class="switch__icon" width="24px" height="24px" aria-hidden="true">
+							<use href="./img/icons/icons.svg#icon-dark" />
+						</svg>
+					</span>
+					<span class="switch__sr">Dark Mode</span>
+				</label>
+			</div>
+			<label class="nav__burguer">
+				<input type="checkbox" id="menu_checkbox">
+				<div></div>
+				<div></div>
+				<div></div>
+			</label>
+		</div>
+	</nav>
+    <main class="container post">
+            
+            <article class="article">
+                <header>
+                    <img class="img" src="./img/reseña.webp" alt="">
+                    <div class="overlay">
+                        <div class="header__categories">
+                            <span>cine</span>
+                            <span>reseñas</span>
+                        </div>
+                        
+                        <h1>Doctor Strange En El Multiverso De La Locura.</h1>
+                        <div class="meta-tags meta-tags--post">
+                            <div class="meta-tags__autor">
+                                <img src="./img/avatar/user_a.webp" alt="">
+                                <p>Cosme Fulanito</p>
+                                <svg class="icon"><use href="./img/icons/icons.svg#icon-mail-solid" /></svg>
+                                <svg class="icon"><use href="./img/icons/icons.svg#icon-x-twitter" /></svg>
+                            </div>
+                            
+                            <p class="meta-tags__date">
+                                <svg class="icon" aria-hidden="true" style="width:3px;height:3px;margin-right:5px"><use href="./img/icons/icons.svg#icon-dot" /></svg>
+                                <svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock-solid" /></svg>
+                                <span> Nov 21, 2022</span>
+                            </p>
+                            <p class="meta-tags__comments">
+                                <svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-comments" /></svg>
+                                <span>0</span>
+                            </p>
+                        </div>
+                    </div>
+                    <svg class="score" width="120" height="120">
+                        <circle r="40" cx="50%" cy="50%" class="score__box"></circle>
+                        <text class="score__number" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" data-number="7.5">0.0</text>
+                        <circle r="45" cx="50%" cy="50%" class="score__progress"></circle>
+                    </svg>
+                </header>
+                
+                <section class="share">
+                    <span class="share__button share__button--share">
+                        <svg class="icon"><use href="./img/icons/icons.svg#icon-share" /></svg>
+                        Compartir
+                    </span>
+                    <a href="#" class="share__button share__button--facebook" title="compartir en facebook">
+                        <svg class="icon"><use href="./img/icons/icons.svg#icon-facebook" /></svg>
+                    </a>
+                    <a href="#" class="share__button share__button--x" title="compartir en twitter">
+                        <svg class="icon"><use href="./img/icons/icons.svg#icon-x-twitter" /></svg>
+                    </a>
+                    <a href="#" class="share__button share__button--whatsapp" title="compartir en whatsapp">
+                        <svg class="icon"><use href="./img/icons/icons.svg#icon-whatsapp" /></svg>
+                    </a>
+                    <a href="#" class="share__button share__button--telegram" title="compartir en telegram">
+                        <svg class="icon"><use href="./img/icons/icons.svg#icon-telegram" /></svg>
+                    </a>
+                    <a href="#" class="share__button share__button--pinterest" title="compartir en pinterest">
+                        <svg class="icon"><use href="./img/icons/icons.svg#icon-pinterest" /></svg>
+                    </a>
+                </section>
+                <hr>
+				<p style="text-align:center;"><i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum obcaecati iste minima laborum quidem, optio non sequi dolorum natus Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem iste, adipisci iure quibusdam perferendis nemo voluptatem quo eaque veritatis quasi? Lorem ipsum dolor sit amet consectetur adipisicing elit.</i></p>
+				<h2>Lorem ipsum dolor sit amet.</h2>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia laborum porro voluptatum magni obcaecati corporis exercitationem deleniti. Quia eligendi doloribus ad, iste aliquam quo? Earum id aspernatur animi repudiandae omnis illum doloribus enim cum. Quasi suscipit consectetur quaerat iure magnam</p>
+                <figure class="float-right">
+                    <img class="img" src="img/reseña-img-1.jpg" alt="">
+                    <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing.</figcaption>
+                </figure>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima rerum laborum molestiae porro laboriosam animi magni ab architecto atque doloribus, similique eaque, natus voluptatibus consequatur consequuntur repudiandae temporibus facilis ducimus.</p>
+                <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus ipsam illum officia facilis, magnam mollitia vitae quis rerum hic molestias.
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda voluptates velit natus omnis voluptatem quaerat in nulla libero modi. Quo, tempora architecto hic totam, praesentium id esse odit harum vel consequatur maxime blanditiis quae aperiam. Repudiandae numquam sunt similique expedita minima dolorum eius. Quidem quae voluptatem, aperiam minima maiores nesciunt.</p>
+				<h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia nemo, eius totam, error incidunt iusto quos pariatur quae, exercitationem esse odio debitis ipsam qui tempore a! Nostrum . Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia nemo, eius totam, error incidunt iusto quos pariatur quae, exercitationem esse odio debitis ipsam qui tempore a! Nostrum.</p>
+                <figure class="float-left">
+                    <img class="img" src="img/reseña-img-3.jpg" alt="">
+                    <figcaption>Lorem ipsum dolor sit amet.</figcaption>
+                </figure>
+                <p>Lorem laudantium consectetur illo vitae maiores maxime ea mollitia vero et cumque provident alias praesentium ratione blanditiis. Dignissimos excepturi impedit perspiciatis, repudiandae nemo quas delectus beatae minus similique labore reiciendis, iste minima, quis incidunt. Rerum pariatur earum itaque beatae nisi id rem laudantium consectetur illo vitae maiores maxime ea mollitia vero et cumque provident alias praesentium ratione blanditiis. Dignissimos excepturi impedit perspiciatis</p>
+				
+                <h2>Lorem ipsum dolor sit amet.</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora facilis hic autem id. Minima iste commodi tempore accusantium maxime, cum modi id ex, labore rem eos quis rerum atque architecto molestiae reprehenderit est expedita blanditiis!</p>
+                <footer>
+                    <section class="calificacion">
+                        <h1>Calificacion</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et voluptatum eligendi deserunt eveniet vitae dolores magni reiciendis hic accusamus ex expedita numquam perspiciatis at earum porro voluptas incidunt est optio, assumenda omnis ipsum possimus.</p>
+                        <span>7.5</span>
+                    </section>
+                    <section class="share">
+                        <span class="share__button share__button--share">
+                            <svg class="icon"><use href="./img/icons/icons.svg#icon-share" /></svg>
+                            Compartir
+                        </span>
+                        <a href="#" class="share__button share__button--facebook" title="compartir en facebook">
+                            <svg class="icon"><use href="./img/icons/icons.svg#icon-facebook" /></svg>
+                        </a>
+                        <a href="#" class="share__button share__button--x" title="compartir en twitter">
+                            <svg class="icon"><use href="./img/icons/icons.svg#icon-x-twitter" /></svg>
+                        </a>
+                        <a href="#" class="share__button share__button--whatsapp" title="compartir en whatsapp">
+                            <svg class="icon"><use href="./img/icons/icons.svg#icon-whatsapp" /></svg>
+                        </a>
+                        <a href="#" class="share__button share__button--telegram" title="compartir en telegram">
+                            <svg class="icon"><use href="./img/icons/icons.svg#icon-telegram" /></svg>
+                        </a>
+                        <a href="#" class="share__button share__button--pinterest" title="compartir en pinterest">
+                            <svg class="icon"><use href="./img/icons/icons.svg#icon-pinterest" /></svg>
+                        </a>
+                    </section>
+                    <hr>
+                    <section class="autor">
+                        <div class="autor__image">
+                            <img class="img" src="./img/avatar/user_a.webp" alt="">
+                        </div>
+                        <div class="autor__info">
+                            <h1>Cosme Fulanito</h1>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam dolorem dolorum voluptates neque soluta autem, dolore hic.</p>
+                            <div class="autor__social">
+                                <svg class="icon"><use href="./img/icons/icons.svg#icon-facebook" /></svg>
+                                <svg class="icon"><use href="./img/icons/icons.svg#icon-x-twitter" /></svg>
+                                <svg class="icon"><use href="./img/icons/icons.svg#icon-instagram" /></svg>
+                            </div>
+                        </div>
+                    </section>
+                </footer>
+            </article>
+            <section class="section relacionados">
+                    <div class="section__header">
+                        <h1>Relacionados</h1>
+                    </div>
+                    <div class="block-6">
+                        <article class="block-6__post">
+                            <a href="#uuuuu">
+                                <picture>
+                                    <source media="(min-width: 769px)" srcset="./img/anime/2_375.webp">
+                                    <source media="(min-width: 577px)" srcset="./img/anime/2_910.webp">
+                                    <source media="(min-width: 375px)" srcset="./img/anime/2_720.webp">
+                                    <img class="img" src="./img/anime/2_375.webp" alt="">
+                                </picture>
+                            </a>
+                            <div class="block-6__content">
+                                <div class="block-6__date">
+                                    <svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+                                    <span>Nov 21, 2022</span>
+                                </div>
+                                <a href="#0000"><h2 class="block-6__title">El orden correcto para ver el anime de Naruto</h2></a>
+                            </div>
+                        </article>
+                        <article class="block-6__post">
+                            <a href="#uuuuu">
+                                <picture>
+                                    <source media="(min-width: 769px)" srcset="./img/anime/1_375.webp">
+                                    <source media="(min-width: 577px)" srcset="./img/anime/1_910.webp">
+                                    <source media="(min-width: 375px)" srcset="./img/anime/1_720.webp">
+                                    <img class="img" src="./img/anime/1_375.webp" alt="">
+                                </picture>
+                            </a>
+                            <div class="block-6__content">
+                                <div class="block-6__date">
+                                    <svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+                                    <span>Nov 21, 2022</span>
+                                </div>
+                                <a href="#0000">
+                                    <h2 class="block-6__title">El autor de Yu-Gi-Oh! publicará un manga de Spider-Man y Iron Man</h2>
+                                </a>
+                            </div>
+                        </article>
+                        <article class="block-6__post">
+                            <a href="#uuuuu">
+                                <picture>
+                                    <source media="(min-width: 769px)" srcset="./img/anime/3_375.webp">
+                                    <source media="(min-width: 577px)" srcset="./img/anime/3_910.webp">
+                                    <source media="(min-width: 375px)" srcset="./img/anime/3_720.webp">
+                                    <img class="img" src="./img/anime/3_375.webp" alt="">
+                                </picture>
+                            </a>
+                            <div class="block-6__content">
+                                <div class="block-6__date">
+                                    <svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+                                    <span>Nov 21, 2022</span>
+                                </div>
+                                <a href="#0000">
+                                    <h2 class="block-6__title">Lo que viene luego de Dragon Ball Super</h2>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+            </section>
+            <section class="comentarios">
+            </section>
+        
+        <aside class="sidebar">
+            <div class="sidebar__content">
+                <section class="section">
+                    <div class="section__header">
+                        <h1>Siguenos</h1>
+                        <svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-like" /></svg>
+                    </div>
+                    <div class="social-bar">
+                        <div class="social-bar__item social-bar__item--facebook">
+                            <svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-facebook" /></svg>
+                            <div class="social-bar__count">
+                                <p>0</p>
+                                <p>Seguidores</p>
+                            </div>
+                        </div>
+                        <div class="social-bar__item social-bar__item--x">
+                            <svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-x-twitter" /></svg>
+                            <div class="social-bar__count">
+                                <p>0</p>
+                                <p>Seguidores</p>
+                            </div>
+                        </div>
+                        <div class="social-bar__item social-bar__item--instagram">
+                            <svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-instagram" /></svg>
+                            <div class="social-bar__count">
+                                <p>0</p>
+                                <p>Seguidores</p>
+                            </div>
+                        </div>
+                        <div class="social-bar__item social-bar__item--youtube">
+                            <svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-youtube" /></svg>
+                            <div class="social-bar__count">
+                                <p>0</p>
+                                <p>Suscriptores</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section">
+                    <div class="section__header">
+                        <h1>Mas Popular</h1>
+                        <svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-fire" /></svg>
+                    </div>
+                    <div class="trending">
+                        <div class="trending__item" data-position="1">
+                            <div class="trending__thumbnaill">
+                                <a href=""><img class="img" src="img/anime/2_165.webp" alt="portada de naruto"></a>
+                            </div>
+                            <div class="trending__content">
+                                <h2 class="trending__title"><a href="">El orden correcto para ver el anime de Naruto</a></h2>
+                                <div class="trending__date">
+                                    <svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+                                    <span>Nov 21, 2022</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="trending__item" data-position="2">
+                            <div class="trending__thumbnaill">
+                                <a href=""><img class="img" src="img/article/3_165.webp" alt="biblioteca de comics"></a>
+                            </div>
+                            <div class="trending__content">
+                                <h2 class="trending__title"><a href="">¿Cómo clasificar tus cómics y ordenar tu biblioteca?</a></h2>
+                                <div class="trending__date">
+                                    <svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+                                    <span>Nov 21, 2022</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="trending__item" data-position="3">
+                            <div class="trending__thumbnaill">
+                                <a href=""><img class="img" src="img/featured/2_165.webp" alt=""></a>
+                            </div>
+                            <div class="trending__content">
+                                <h2 class="trending__title"><a href="">Alita: Battle Angel podría tener una secuela después de todo</a></h2>
+                                <div class="trending__date">
+                                    <svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+                                    <span>Nov 21, 2022</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="trending__item" data-position="4">
+                            <div class="trending__thumbnaill">
+                                <a href=""><img class="img" src="img/anime/3_165.webp" alt="portada dragon ball super"></a>
+                            </div>
+                            <div class="trending__content">
+                                <h2 class="trending__title"><a href="">Lo que viene luego de Dragon Ball Super</a></h2>
+                                <div class="trending__date">
+                                    <svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+                                    <span>Nov 21, 2022</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+            </div>
+        </aside>
+    </main>
+
+	<footer class="footer">
+		<div class="container">
+			<section class="about">
+				<img class="about__logo" src="img/zonageek-logo.webp" alt="Logo Zona Geek">
+				<p class="about__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt expedita natus quisquam maiores aspernatur perspiciatis.</p>
+			</section>
+			<section class="social-footer">
+				<h1 class="social__title">Redes Sociales</h1>
+				<div class="social-footer__container">
+					<div class="social-footer__item"><svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-square-facebook" /></svg><p>Sigue nuestra Fanpage</p></div>
+					<div class="social-footer__item"><svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-instagram" /></svg><p>Siguenos en Instagram</p></div>
+					<div class="social-footer__item"><svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-youtube" /></svg><p>Suscribete a nuestro canal</p></div>
+					<div class="social-footer__item"><svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-x-twitter" /></svg><p>Siguenos en Twitter</p></div>
+					
+				</div>
+			</section>
+			<section class="newsletter">
+				<h1 class="newsletter__title">Newsletter</h1>
+				<p class="newsletter__text">Lorem ipsum dolor sit amet consectetur.</p>
+				<input class="newsletter__email" type="email" name="" id="" placeholder="Su dirección de email">
+				<input class="newsletter__button" type="submit" value="Suscribirse">
+			</section>
+		</div>
+		<section class="subfooter">
+			<div class="container">
+				<p>ZonaGeek - 2022</p>
+				<a href="https://github.com/erme07/zona-geek.git">Repositorio</a>
+			</div>
+		</section>
+</footer>
+
+<div class="button-top">
+    <div class="button-top__container">
+        <svg class="icon"><use href="./img/icons/icons.svg#icon-arrow-up" /></svg>
+    </div>
+</div>
+</body>
+</html>

@@ -155,7 +155,6 @@ const prevSlide = () => {
 
 
 let radio = document.querySelector('.score__progress').r.baseVal.value;
-let cincoprogreso = 9.425;
 let circunferencia = 2 * Math.PI * radio;
 let progreso = 95;
 
@@ -176,6 +175,9 @@ const incrementarValor = (circulos, tasa, tiempoTotal, valorMaximo) => {
 
         let radio = barra.r.baseVal.value;
         let circunferencia = 2 * Math.PI * radio;
+        barra.style.strokeDasharray = `${circunferencia} ${circunferencia}`;
+        barra.style.strokeDashoffset = circunferencia;
+        
         let intervalo = setInterval(() => {
             valorActual += tasa;
             valorActual = Math.round(valorActual * 10) / 10; // Redondea a la décima más cercana
@@ -198,7 +200,7 @@ const incrementarValor = (circulos, tasa, tiempoTotal, valorMaximo) => {
 }
 
 
-let resenias = document.getElementById('resenias');
+let resenias = document.querySelector('.score');
 
 let observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {

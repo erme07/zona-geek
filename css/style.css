@@ -12,6 +12,9 @@
     --xColor: #000000;
     --twColor:#50c7fa;
     --ytColor:#dc392b;
+    --wsColor: #25D366;
+    --tgColor: #0088cc;
+    --prColor: #E60023;
 
     --title-color:#333333;
     --title-hover:#fdebb5;
@@ -62,7 +65,7 @@ html {scroll-behavior: smooth;}
 
 a {text-decoration: none;color: unset;}
 h1,h2,h3,h4,h5 {text-wrap: pretty;}
-.img {width: 100%; height: 100%; object-fit: cover;}
+.img {width: 100%; height: 100%; object-fit: cover;display: block;}
 svg.icon {width: 1em; height: 1em; fill: currentColor;}
 
 @font-face {font-family: classic; src: url(../font/ClassicComic.otf);}
@@ -146,7 +149,7 @@ body{
     border-bottom: 2px solid var(--section-separator);
     transition: color .2s, border-bottom .2s;
 }
-.section__header h4 {font-size: 16px;}
+.section__header h1 {font-size: 16px;}
 .section__filter{
     text-transform: uppercase;
     font-size: 11px;
@@ -985,7 +988,7 @@ body{
 @media screen and (max-width:768px) {
     .header {display: none;}
 
-    .section__header h4 {font-size: clamp(18px, 3.2vw, 22px);}
+    .section__header h1 {font-size: clamp(18px, 3.2vw, 22px);}
 
     .filter__button {display: block;}
     .filter__options{
