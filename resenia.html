@@ -19,7 +19,9 @@
 			dark_switch.checked = (modo === "dark" || window.matchMedia('(prefers-color-scheme: dark)' && modo !="dark").matches) ? true : false;
 		});
 	</script>
-	<script defer src="js/script.js"></script>
+	<script defer src="./js/post.js" type="module"></script>
+    <script defer src="./js/slider.js"></script>
+    <script defer src="./js/circular-progress.js"></script>
     <title>Reseña - Doctor Strange in the multiverse of madness</title>
 </head>
 <body>
@@ -94,8 +96,13 @@
     <main class="container post">
             
             <article class="article">
-                <header>
-                    <img class="img" src="./img/reseña.webp" alt="">
+                <header id="reviews">
+                    <picture>
+                        <source media="(min-width: 1125px)" srcset="./img/reseña_800.webp">
+                        <source media="(min-width: 768px)" srcset="./img/reseña_1000.webp">
+                        <source media="(min-width: 577px)" srcset="./img/reseña_800.webp">
+                        <img class="img" src="./img/reseña_600.webp" alt="portada doctor strange">
+                    </picture>
                     <div class="overlay">
                         <div class="header__categories">
                             <span>cine</span>
@@ -110,9 +117,8 @@
                                 <svg class="icon"><use href="./img/icons/icons.svg#icon-mail-solid" /></svg>
                                 <svg class="icon"><use href="./img/icons/icons.svg#icon-x-twitter" /></svg>
                             </div>
-                            
+                            <svg class="icon meta-tags__separator" aria-hidden="true"><use href="./img/icons/icons.svg#icon-dot" /></svg>
                             <p class="meta-tags__date">
-                                <svg class="icon" aria-hidden="true" style="width:3px;height:3px;margin-right:5px"><use href="./img/icons/icons.svg#icon-dot" /></svg>
                                 <svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock-solid" /></svg>
                                 <span> Nov 21, 2022</span>
                             </p>
@@ -130,10 +136,10 @@
                 </header>
                 
                 <section class="share">
-                    <span class="share__button share__button--share">
+                    <div class="share__button share__button--share">
                         <svg class="icon"><use href="./img/icons/icons.svg#icon-share" /></svg>
-                        Compartir
-                    </span>
+                        <span>Compartir</span>
+                    </div>
                     <a href="#" class="share__button share__button--facebook" title="compartir en facebook">
                         <svg class="icon"><use href="./img/icons/icons.svg#icon-facebook" /></svg>
                     </a>
@@ -155,7 +161,7 @@
 				<h2>Lorem ipsum dolor sit amet.</h2>
 				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia laborum porro voluptatum magni obcaecati corporis exercitationem deleniti. Quia eligendi doloribus ad, iste aliquam quo? Earum id aspernatur animi repudiandae omnis illum doloribus enim cum. Quasi suscipit consectetur quaerat iure magnam</p>
                 <figure class="float-right">
-                    <img class="img" src="img/reseña-img-1.jpg" alt="">
+                    <img class="img" src="img/reseña-img-1.webp" alt="">
                     <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing.</figcaption>
                 </figure>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima rerum laborum molestiae porro laboriosam animi magni ab architecto atque doloribus, similique eaque, natus voluptatibus consequatur consequuntur repudiandae temporibus facilis ducimus.</p>
@@ -165,7 +171,7 @@
 				<h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
 				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia nemo, eius totam, error incidunt iusto quos pariatur quae, exercitationem esse odio debitis ipsam qui tempore a! Nostrum . Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia nemo, eius totam, error incidunt iusto quos pariatur quae, exercitationem esse odio debitis ipsam qui tempore a! Nostrum.</p>
                 <figure class="float-left">
-                    <img class="img" src="img/reseña-img-3.jpg" alt="">
+                    <img class="img" src="img/reseña-img-3.webp" alt="">
                     <figcaption>Lorem ipsum dolor sit amet.</figcaption>
                 </figure>
                 <p>Lorem laudantium consectetur illo vitae maiores maxime ea mollitia vero et cumque provident alias praesentium ratione blanditiis. Dignissimos excepturi impedit perspiciatis, repudiandae nemo quas delectus beatae minus similique labore reiciendis, iste minima, quis incidunt. Rerum pariatur earum itaque beatae nisi id rem laudantium consectetur illo vitae maiores maxime ea mollitia vero et cumque provident alias praesentium ratione blanditiis. Dignissimos excepturi impedit perspiciatis</p>
@@ -174,15 +180,15 @@
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora facilis hic autem id. Minima iste commodi tempore accusantium maxime, cum modi id ex, labore rem eos quis rerum atque architecto molestiae reprehenderit est expedita blanditiis!</p>
                 <footer>
                     <section class="calificacion">
-                        <h1>Calificacion</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et voluptatum eligendi deserunt eveniet vitae dolores magni reiciendis hic accusamus ex expedita numquam perspiciatis at earum porro voluptas incidunt est optio, assumenda omnis ipsum possimus.</p>
-                        <span>7.5</span>
+                        <h1 class="calificacion__titulo">Calificacion</h1>
+                        <p class="calificacion__resumen">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et voluptatum eligendi deserunt eveniet vitae dolores magni reiciendis hic accusamus ex expedita numquam perspiciatis at earum porro voluptas incidunt est optio, assumenda omnis ipsum possimus.</p>
+                        <span class="calificacion__numero">7.5</span>
                     </section>
                     <section class="share">
-                        <span class="share__button share__button--share">
+                        <div class="share__button share__button--share">
                             <svg class="icon"><use href="./img/icons/icons.svg#icon-share" /></svg>
-                            Compartir
-                        </span>
+                            <span>Compartir</span>
+                        </div>
                         <a href="#" class="share__button share__button--facebook" title="compartir en facebook">
                             <svg class="icon"><use href="./img/icons/icons.svg#icon-facebook" /></svg>
                         </a>
@@ -278,12 +284,88 @@
                         </article>
                     </div>
             </section>
-            <section class="comentarios">
+            <section class="section comentarios">
+                <div class="section__header">
+                    <h1>Comentarios</h1>
+                </div>
+                <div class="comment">
+                    <div class="comment__user">
+                        <img class="img" src="./img/avatar/user_a.webp" alt="">
+                    </div>
+                    <div class="comment__content">
+                        <div class="comment__header">
+                            <h2>Bruce Banner</h2>
+                            <span>
+                                <svg class="icon"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+                                hace 14 horas
+                            </span>
+                        </div>
+                        <p class="comment__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi nisi suscipit consequatur error iste quo esse eius illum quae quisquam odio, velit ducimus et corrupti.</p>
+                        <div class="comment__options">
+                            <span>
+                            <svg class="icon"><use href="./img/icons/icons.svg#icon-like-solid" /></svg>
+                            </span>
+                            <span>
+                                <svg class="icon"><use href="./img/icons/icons.svg#icon-dislike-solid" /></svg>
+                            </span>
+                            <span>
+                                <svg class="icon"><use href="./img/icons/icons.svg#icon-reply-solid" /></svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment">
+                    <div class="comment__user">
+                        <img class="img" src="./img/avatar/user_b.webp" alt="">
+                    </div>
+                    <div class="comment__content">
+                        <div class="comment__header">
+                            <h2>Jennifer Walters</h2>
+                            <span>
+                                <svg class="icon"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+                                hace 14 horas
+                            </span>
+                        </div>
+                        <p class="comment__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic dolores accusamus possimus maxime fuga ut odio, qui amet recusandae similique odit, sapiente iusto non laborum natus, aut rem eligendi nesciunt repudiandae. Accusantium perferendis reiciendis sed.</p>
+                        <div class="comment__options">
+                            <span>
+                            <svg class="icon"><use href="./img/icons/icons.svg#icon-like-solid" /></svg>
+                            </span>
+                            <span>
+                                <svg class="icon"><use href="./img/icons/icons.svg#icon-dislike-solid" /></svg>
+                            </span>
+                            <span>
+                                <svg class="icon"><use href="./img/icons/icons.svg#icon-reply-solid" /></svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="section__subheader">
+                    <h2>Comentar</h2>
+                    <div class="sesion">
+                        <a href="">Ingresar</a>
+                        <a href="">Registrarse</a>
+                    </div>
+                </div>
+               <form action="" class="comment comment--form">
+                <div class="comment__user">
+                    <img class="img" src="./img/avatar/user_b.webp" alt="">
+                </div>
+                <label class="textarea-container">
+                    <textarea name="" id="" class="input-coment" placeholder="Escriba aqui" cols="1"></textarea>
+                </label>
+                <div class="form-options">
+                    <input type="submit" value="Publicar">
+                    <input type="reset" value="Descartar">
+                </div>
+               </form>
             </section>
         
-        <aside class="sidebar">
-            <div class="sidebar__content">
-                <section class="section">
+        <aside class="sidebar sidebar--sticky">
+            <div id="triggerBef" style="height: 0;"></div>
+            <div class="sidebar__content sidebar__content--sticky">
+                <div id="triggerBefore" style="height: 0;"></div>
+                <section class="section section--social">
                     <div class="section__header">
                         <h1>Siguenos</h1>
                         <svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-like" /></svg>
@@ -319,63 +401,208 @@
                         </div>
                     </div>
                 </section>
-                <section class="section">
+                <section class="section section--dark section--cartelera">
                     <div class="section__header">
-                        <h1>Mas Popular</h1>
-                        <svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-fire" /></svg>
-                    </div>
-                    <div class="trending">
-                        <div class="trending__item" data-position="1">
-                            <div class="trending__thumbnaill">
-                                <a href=""><img class="img" src="img/anime/2_165.webp" alt="portada de naruto"></a>
-                            </div>
-                            <div class="trending__content">
-                                <h2 class="trending__title"><a href="">El orden correcto para ver el anime de Naruto</a></h2>
-                                <div class="trending__date">
-                                    <svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
-                                    <span>Nov 21, 2022</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="trending__item" data-position="2">
-                            <div class="trending__thumbnaill">
-                                <a href=""><img class="img" src="img/article/3_165.webp" alt="biblioteca de comics"></a>
-                            </div>
-                            <div class="trending__content">
-                                <h2 class="trending__title"><a href="">¿Cómo clasificar tus cómics y ordenar tu biblioteca?</a></h2>
-                                <div class="trending__date">
-                                    <svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
-                                    <span>Nov 21, 2022</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="trending__item" data-position="3">
-                            <div class="trending__thumbnaill">
-                                <a href=""><img class="img" src="img/featured/2_165.webp" alt=""></a>
-                            </div>
-                            <div class="trending__content">
-                                <h2 class="trending__title"><a href="">Alita: Battle Angel podría tener una secuela después de todo</a></h2>
-                                <div class="trending__date">
-                                    <svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
-                                    <span>Nov 21, 2022</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="trending__item" data-position="4">
-                            <div class="trending__thumbnaill">
-                                <a href=""><img class="img" src="img/anime/3_165.webp" alt="portada dragon ball super"></a>
-                            </div>
-                            <div class="trending__content">
-                                <h2 class="trending__title"><a href="">Lo que viene luego de Dragon Ball Super</a></h2>
-                                <div class="trending__date">
-                                    <svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
-                                    <span>Nov 21, 2022</span>
-                                </div>
-                            </div>
+                        <h1>Cartelera</h1>
+                        <div class="block-4__buttons">
+                            <svg class="icon next blocked" id="next"><use href="./img/icons/icons.svg#icon-arrow-left" /></svg>
+                            <svg class="icon prev" id="prev"><use href="./img/icons/icons.svg#icon-arrow-right" /></svg>
                         </div>
                     </div>
-            </section>
+                    <div id="slider" class="block-4">
+                        <div class="block-4__item">
+                            
+                            <img class="img" src="./img/slider/1.webp" alt="poster invasion secreta">
+                            <div class="block-4__content">
+                                <div class="block-4__date">
+                                    <svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+                                    <span>Feb 05, 2023</span>
+                                </div>
+                                <p class="block-4__title">Invasion Secreta</p>
+                            </div>
+                            
+                        </div>
+                        <div class="block-4__item">
+                            
+                            <img class="img" src="./img/slider/3.webp" alt="">
+                            <div class="block-4__content">
+                                <div class="block-4__date">
+                                    <svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+                                    <span>Feb 17, 2023</span>
+                                </div>
+                                <p class="block-4__title">ANT-MAN AND THE WASP: QUANTUMANIA</p>
+                            </div>
+                            
+                        </div>
+                        <div class="block-4__item">
+                            
+                            <img class="img" src="./img/slider/2.webp" alt="">
+                            <div class="block-4__content">
+                                <div class="block-4__date">
+                                    <svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+                                    <span>Mar 17, 2023</span>
+                                </div>
+                                <p class="block-4__title">¡SHAZAM! LA FURIA DE LOS DIOSES</p>
+                            </div>
+                            
+                        </div>
+                        <div class="block-4__item">
+                            
+                            <img class="img" src="./img/slider/7.webp" alt="">
+                            <div class="block-4__content">
+                                <div class="block-4__date">
+                                    <svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+                                    <span>May 05, 2023</span>
+                                </div>
+                                <p class="block-4__title">Guardianes de la Galaxia Volumen 3</p>
+                            </div>
+                            
+                        </div>
+                        <div class="block-4__item">
+                            
+                            <img class="img" src="./img/slider/8.webp" alt="">
+                            <div class="block-4__content">
+                                <div class="block-4__date">
+                                    <svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+                                    <span>Jun 02, 2023</span>
+                                </div>
+                                <p class="block-4__title">Spiderman: Across the Spiderverse</p>
+                            </div>
+                            
+                        </div>
+                        <div class="block-4__item">
+                            
+                            <img class="img" src="./img/slider/9.webp" alt="">
+                            <div class="block-4__content">
+                                <div class="block-4__date">
+                                    <svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+                                    <span>Jun 23, 2023</span>
+                                </div>
+                                <p class="block-4__title">The Flash</p>
+                            </div>
+                            
+                        </div>
+                        <div class="block-4__item">
+                            
+                            <img class="img" src="./img/slider/4.webp" alt="">
+                            <div class="block-4__content">
+                                <div class="block-4__date">
+                                    <svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+                                    <span>Jul 28, 2023</span>
+                                </div>
+                                <p class="block-4__title">The Marvels</p>
+                            </div>
+                            
+                        </div>
+                        <div class="block-4__item">
+                            
+                            <img class="img" src="./img/slider/5.webp" alt="">
+                            <div class="block-4__content">
+                                <div class="block-4__date">
+                                    <svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+                                    <span>Dic 23, 2023</span>
+                                </div>
+                                <p class="block-4__title">AQUAMAN AND THE LOST KINGDOM</p>
+                            </div>
+                            
+                        </div>
+                        <div class="block-4__item">
+                            
+                            <img class="img" src="./img/slider/6.webp" alt="">
+                            <div class="block-4__content">
+                                <div class="block-4__date">
+                                    <svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+                                    <span>Feb 23, 2024</span>
+                                </div>
+                                <p class="block-4__title">Madame Web</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </section>
+                <section class="section section--latest">
+                    <div class="section__header">
+                        <h1>Ultimas Noticias</h1>
+                        <svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-calendar" /></svg>
+                    </div>
+                    <div class="latest">
+                        <div class="latest__item" data-position="1">
+                            <div class="latest__thumbnaill">
+                                <a href=""><img class="img" src="./img/featured/1_165.webp" alt="portada de loki temporada 2"></a>
+                            </div>
+                            <div class="latest__content">
+                                <h2 class="latest__title"><a href="" title="La temporada 2 de Loki finalmente tiene fecha de estreno">La temporada 2 de Loki finalmente tiene fecha de estreno</a></h2>
+                                <div class="latest__date">
+                                    <svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+                                    <span>Nov 21, 2022</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="latest__item" data-position="2">
+                            <div class="latest__thumbnaill">
+                                <a href=""><img class="img" src="./img/featured/2_165.webp" alt="imagen de alita battle angel"></a>
+                            </div>
+                            <div class="latest__content">
+                                <h2 class="latest__title"><a href="" title="Alita: Battle Angel podría tener una secuela después de todo">Alita: Battle Angel podría tener una secuela después de todo</a></h2>
+                                <div class="latest__date">
+                                    <svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+                                    <span>Nov 21, 2022</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="latest__item" data-position="3">
+                            <div class="latest__thumbnaill">
+                                <a href=""><img class="img" src="./img/featured/3_165.webp" alt="imagen the witcher"></a>
+                            </div>
+                            <div class="latest__content">
+                                <h2 class="latest__title"><a href="" title="El remake de The Witcher será de mundo abierto">El remake de The Witcher será de mundo abierto</a></h2>
+                                <div class="latest__date">
+                                    <svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+                                    <span>Nov 21, 2022</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="latest__item" data-position="4">
+                            <div class="latest__thumbnaill">
+                                <a href=""><img class="img" src="./img/news/1_165.webp" alt="imagen de black adam"></a>
+                            </div>
+                            <div class="latest__content">
+                                <h2 class="latest__title"><a href="" title="Black Adam podría no regresar para una secuela.">Black Adam podría no regresar para una secuela.</a></h2>
+                                <div class="latest__date">
+                                    <svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+                                    <span>Nov 21, 2022</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="latest__item" data-position="4">
+                            <div class="latest__thumbnaill">
+                                <a href=""><img class="img" src="./img/news/2.webp" alt="portada dragon ball super"></a>
+                            </div>
+                            <div class="latest__content">
+                                <h2 class="latest__title"><a href="" title="El último tráiler de Ant-Man 3 revela el diseño final de Kang">El último tráiler de Ant-Man 3 revela el diseño final de Kang</a></h2>
+                                <div class="latest__date">
+                                    <svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+                                    <span>Nov 21, 2022</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="latest__item" data-position="4">
+                            <div class="latest__thumbnaill">
+                                <a href=""><img class="img" src="./img/news/3.webp" alt="portada dragon ball super"></a>
+                            </div>
+                            <div class="latest__content">
+                                <h2 class="latest__title"><a href="" title="Wonder Woman no tendrá tercera parte.">Wonder Woman no tendrá tercera parte.</a></h2>
+                                <div class="latest__date">
+                                    <svg class="icon" aria-hidden="true"><use href="./img/icons/icons.svg#icon-clock" /></svg>
+                                    <span>Nov 21, 2022</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div id="triggerAfter" style="height: 0;"></div>
             </div>
+            <div id="triggerAft" style="height: 0; position: absolute; bottom: 0;"></div>
         </aside>
     </main>
 
