@@ -1,6 +1,7 @@
 const buttonTop = document.querySelector(".button-top");
 let posicionY = 0;
 
+import * as smart_sidebar from './smart_sidebar.js';
 import * as nav_bar from './navbar.js';
 
 
@@ -46,8 +47,10 @@ const scrollDirection=()=>{
     if(posicionY > scrollY){
         //subiendo
         nav_bar.navBarScrollUp();
+        smart_sidebar.sidebarScrollUp();
     }else{
         //bajando
         nav_bar.navBarScrollDown();
+        smart_sidebar.sidebarScrollDown();
     }
 }
