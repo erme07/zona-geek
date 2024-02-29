@@ -60,10 +60,8 @@ const prevSlide = () => {
 }
 
 document.addEventListener("click", (e) =>{
-    if (e.target.id === "prev" || e.target.matches('.prev *')) {
+    if (e.target.id === "prev" || e.target.matches('.prev *'))
         prevSlide();
-    }
-    else if (e.target.id === "next" || e.target.matches('.next *')) {
+    else if (e.target.id === "next" || e.target.matches('.next *'))
         nextSlide();
-    }
 })

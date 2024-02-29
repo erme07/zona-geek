@@ -4,22 +4,20 @@ let posicionY = 0;
 import * as smart_sidebar from './smart_sidebar.js';
 import * as nav_bar from './navbar.js';
 
+smart_sidebar.initialPositionSidebar();
 
 document.addEventListener("click", (e) =>{
-    if(e.target.id === "menu_checkbox"){
+    if(e.target.id === "menu_checkbox")
         document.querySelector(".nav").classList.toggle("nav__menu--show");
-    }
     else if(e.target.id === "filter__button"){
         if (document.querySelector(".show-options"))
             document.querySelector(".show-options").classList.remove("show-options");
         e.target.parentElement.classList.toggle("show-options");
     }
-    else if (document.querySelector(".show-options") && !e.target.matches(".filter__options *")){
+    else if (document.querySelector(".show-options") && !e.target.matches(".filter__options *"))
         document.querySelector(".show-options").classList.remove("show-options");
-    }
-    else if(e.target.matches(".button-top") || e.target.matches(".button-top *")){
-        window.scrollTo(0, 0);
-    }
+    else if(e.target.matches(".button-top") || e.target.matches(".button-top *"))
+        scrollTo(0, 0);
 });
 
 document.addEventListener("input", (e) =>{
@@ -54,3 +52,4 @@ const scrollDirection=()=>{
         smart_sidebar.sidebarScrollDown();
     }
 }
+
