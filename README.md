@@ -1,13 +1,20 @@
-# zona-geek
+# Zona Geek
 
-La idea de este proyecto es retomar la esencia del trabajo realizado para el proyecto final del curso Desarrollador Web - Fullstack Python del programa "codo a codo", mejorando los distintos aspectos del mismo.
+Geek-style web magazine, containing home, article, and review pages.
 
-TPO Original para el programa "codo a codo": [ZonaGeek](https://erme07.github.io/)
+[ZonaGeek](https://zona-geek.pages.dev/)
 
-Nuevo Proyecto: [ZonaGeek 2.0](https://zona-geek.pages.dev/)
+![preview](screenshot.webp)
 
-## Algunas de las mejoras:
+## Features:
 
-* Se optimiza el codigo CSS aplicando metodologia BEM
-* Mejor uso de etiquetas semanticas
-* Evolución del aspecto visual
+* Fully responsive
+* Interactive slider
+* Dropdown menu
+* Animated circular progress bars
+* Sticky sidebar
+* Sticky navbar
+* Dark mode
+
+
+
