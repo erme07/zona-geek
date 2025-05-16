@@ -4,7 +4,7 @@ La idea de este proyecto es retomar la esencia del trabajo realizado para el pro
 
 TPO Original para el programa "codo a codo": [ZonaGeek](https://erme07.github.io/)
 
-Nuevo Proyecto: [ZonaGeek 2.0](https://erme07.github.io/zona-geek/)
+Nuevo Proyecto: [ZonaGeek 2.0](https://zona-geek.pages.dev/)
 
 ## Algunas de las mejoras:
 
